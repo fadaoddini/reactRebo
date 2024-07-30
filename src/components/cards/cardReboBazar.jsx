@@ -18,7 +18,13 @@ const CardReboBazar = () => {
           sortby: "highestWeight",
           type: "sell"
         };
-        const res = await axios.post("https://rebo.ir/catalogue/sortby", params);
+
+        const res = await axios.post("https://rebo.ir/catalogue/sortby", params, {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+
         console.log("cardReboBazar========================line20");
         console.log(res.data);
         setItems(res.data);
@@ -32,7 +38,6 @@ const CardReboBazar = () => {
 
     fetchData();
   }, []);
-
   if (error) {
     return <div>Error: {error.message}</div>;
   }

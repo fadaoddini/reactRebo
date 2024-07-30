@@ -17,7 +17,9 @@ const CardReboBazar = () => {
       type:"sell"
     }
     axios.post("https://rebo.ir/catalogue/sortby",params).then((res) => {
-      setItems(res.data.categories);
+      console.log("cardReboBazar========================line20")
+      console.log(res.data)
+      setItems(res.data);
       setIsLoading(false);
     });
   }, []);
@@ -29,7 +31,7 @@ const CardReboBazar = () => {
           <Loading />
         </div>
       ) : (
-        items.map((item) => <Card key={item.ID} item={item} />)
+        items.map((item) => <Card key={item.id} item={item} />)
       )}
     </div>
   );

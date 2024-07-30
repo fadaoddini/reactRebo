@@ -11,7 +11,7 @@ const CardReboBazar = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    axios.get("https://rebo.ir/").then((res) => {
+    axios.get("https://pastry.alirezaahmadi.info/api/v1/cats").then((res) => {
       setItems(res.data.categories);
       setIsLoading(false);
     });

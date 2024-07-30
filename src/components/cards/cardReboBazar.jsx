@@ -3,7 +3,9 @@ import axios from "axios";
 import styles from "./style_card_bazar.module.css";
 import Loading from "../loading/index";
 import CountdownTimer from "../timer/CountdownTimer";
-import clock from "../../assets/images/clock.png"
+import clock from "../../assets/images/clock.png";
+import Config from "../../config/config";
+import nopic from "../../assets/images/nopic.png"
 
 const CardReboBazar = () => {
   
@@ -19,14 +21,13 @@ const CardReboBazar = () => {
           type: "sell"
         };
 
-        const res = await axios.post("https://rebo.ir/catalogue/sortby", params, {
+        const res = await axios.post(`${Config.baseUrl}/catalogue/sortby`, params, {
           headers: {
             'Content-Type': 'application/json'
           }
         });
 
-        console.log("cardReboBazar========================line20");
-        console.log(res.data);
+
         setItems(res.data);
       } catch (err) {
         console.error("An error occurred while fetching data:", err);
@@ -56,13 +57,22 @@ const CardReboBazar = () => {
 };
 
 const Card = ({ item }) => {
+  const packaging = item.attr_value.find(attr => attr.key === 'بسته بندی');
+  // بررسی اینکه آیا تصاویر وجود دارند و به درستی مقداردهی شده‌اند
+  const imageUrl = item.images.length > 0 ? `${Config.baseUrl}${item.images[0].image}`:{nopic};
+  
+
   const targetDate = new Date(new Date().getTime() + (0.5 * 24 * 60 * 60 * 1000) + (3 * 60 * 60 * 1000));
   return (
+
     <div className={styles.card_bazar_green}>
-      <img
-        src="https://images.unsplash.com/photo-1606830733744-0ad778449672?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzl8fGNocmlzdG1hcyUyMHRyZWV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-        alt=""
-      />
+
+
+
+      {item.images.length > 0 ? <img   src={imageUrl} alt={item.name_type} />:  <img   src={nopic} alt={item.name_type} />}
+
+
+
       <h1>{item.name_type}</h1>
       <div className={styles.top_bider_price_green}>
         بالاترین پیشنهاد :<span>{item.price}</span> ریال
@@ -71,7 +81,7 @@ const Card = ({ item }) => {
         قیمت :<span>{item.price}</span> ریال
       </div>
       <div className={styles.package_green}>
-        بسته بندی :<span>کارتن 5 کیلویی</span>
+        بسته بندی :<span>{packaging ? packaging.value : 'مشخص نشده'}</span>
       </div>
       <div className={styles.weight_green}>
         وزن :<span>{item.weight}</span> کیلوگرم

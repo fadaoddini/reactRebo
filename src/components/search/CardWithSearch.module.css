@@ -1,0 +1,50 @@
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    padding: 16px;
+    margin-top:5px ;
+    direction: rtl;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  .searchContainer {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .searchInput {
+    flex: 1;
+    border: none;
+    padding: 8px 16px;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .searchButton {
+    background-color: #ffffff;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+  

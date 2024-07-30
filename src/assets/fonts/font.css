@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "shabnam";
+  src: url("./shabnam/Shabnam-Medium.ttf");
+}
+
+
+*,
+body,
+button {
+  font-family: "shabnam";
+  list-style-type: none;
+}
+
+
+body {
+  margin: 0px;
+}
+
+ul {
+    padding: 0;
+}
+

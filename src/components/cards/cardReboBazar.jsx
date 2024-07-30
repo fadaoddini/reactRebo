@@ -10,7 +10,16 @@ const CardReboBazar = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [items, setItems] = useState([]);
   
-
+  let params = {
+    sortby:"highestWeight",
+    type:"sell"
+  }
+  axios.post("https://rebo.ir/catalogue/sortby",params).then((res) => {
+    console.log("cardReboBazar========================line20")
+    console.log(res)
+    setItems(res.data);
+    setIsLoading(false);
+  });
   useEffect(() => {
     let params = {
       sortby:"highestWeight",

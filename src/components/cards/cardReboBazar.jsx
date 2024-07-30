@@ -5,10 +5,9 @@ import Loading from "../loading/index";
 import CountdownTimer from "../timer/CountdownTimer";
 import clock from "../../assets/images/clock.png";
 import Config from "../../config/config";
-import nopic from "../../assets/images/nopic.png"
+import nopic from "../../assets/images/nopic.png";
 
 const CardReboBazar = () => {
-  
   const [isLoading, setIsLoading] = useState(true);
   const [items, setItems] = useState([]);
   const [error, setError] = useState(null);
@@ -18,7 +17,7 @@ const CardReboBazar = () => {
       try {
         let params = {
           sortby: "highestWeight",
-          type: "sell"
+          type: "etc"
         };
 
         const res = await axios.post(`${Config.baseUrl}/catalogue/sortby`, params, {
@@ -26,7 +25,6 @@ const CardReboBazar = () => {
             'Content-Type': 'application/json'
           }
         });
-
 
         setItems(res.data);
       } catch (err) {
@@ -39,6 +37,7 @@ const CardReboBazar = () => {
 
     fetchData();
   }, []);
+
   if (error) {
     return <div>Error: {error.message}</div>;
   }
@@ -58,44 +57,48 @@ const CardReboBazar = () => {
 
 const Card = ({ item }) => {
   const packaging = item.attr_value.find(attr => attr.key === 'بسته بندی');
-  // بررسی اینکه آیا تصاویر وجود دارند و به درستی مقداردهی شده‌اند
-  const imageUrl = item.images.length > 0 ? `${Config.baseUrl}${item.images[0].image}`:{nopic};
-  
+  const imageUrl = item.images.length > 0 ? `${Config.baseUrl}${item.images[0].image}` : nopic;
 
   const targetDate = new Date(new Date().getTime() + (0.5 * 24 * 60 * 60 * 1000) + (3 * 60 * 60 * 1000));
+  
+  const cardStyle = item.sell_buy === 1 ? styles.card_bazar_red : styles.card_bazar_green;
+  const topBiderPriceStyle = item.sell_buy === 1 ? styles.top_bider_price_red : styles.top_bider_price_green;
+  const priceStyle = item.sell_buy === 1 ? styles.price_red : styles.price_green;
+  const packageStyle = item.sell_buy === 1 ? styles.package_red : styles.package_green;
+  const weightStyle = item.sell_buy === 1 ? styles.weight_red : styles.weight_green;
+  const timerStyle = item.sell_buy === 1 ? styles.timer_red : styles.timer_green;
+  const timerTitleStyle = item.sell_buy === 1 ? styles.timer_title_red : styles.timer_title_green;
+  const timerIconStyle = item.sell_buy === 1 ? styles.timer_icon_red : styles.timer_icon_green;
+  const bgNumberBidStyle = item.sell_buy === 1 ? styles.bg_number_bid_red : styles.bg_number_bid_green;
+  const textNumberBidStyle = item.sell_buy === 1 ? styles.text_number_bid_red : styles.text_number_bid_green;
+
   return (
-
-    <div className={styles.card_bazar_green}>
-
-
-
-      {item.images.length > 0 ? <img   src={imageUrl} alt={item.name_type} />:  <img   src={nopic} alt={item.name_type} />}
-
-
-
+    <div className={cardStyle}>
+      <img src={imageUrl} alt={item.name_type} />
       <h1>{item.name_type}</h1>
-      <div className={styles.top_bider_price_green}>
+      <div className={topBiderPriceStyle}>
         بالاترین پیشنهاد :<span>{item.price}</span> ریال
       </div>
-      <div className={styles.price_green}>
+      <div className={priceStyle}>
         قیمت :<span>{item.price}</span> ریال
       </div>
-      <div className={styles.package_green}>
+      <div className={packageStyle}>
         بسته بندی :<span>{packaging ? packaging.value : 'مشخص نشده'}</span>
       </div>
-      <div className={styles.weight_green}>
+      <div className={weightStyle}>
         وزن :<span>{item.weight}</span> کیلوگرم
       </div>
-      <div className={styles.timer_green}>
-        <div className={styles.timer_title_green}>
-        <CountdownTimer targetDate={targetDate} />
+      <div className={timerStyle}>
+        <div className={timerTitleStyle}>
+          <CountdownTimer targetDate={targetDate} />
         </div>
-        <div className={styles.timer_icon_green}>
-          <img
-            src={clock}
-            alt=""
-          />
+        <div className={timerIconStyle}>
+          <img src={clock} alt="" />
         </div>
+      </div>
+      <div className={bgNumberBidStyle}>
+        <span>150</span>
+        <div className={textNumberBidStyle}>پیشنهاد</div>
       </div>
     </div>
   );

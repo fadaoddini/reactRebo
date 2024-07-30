@@ -9,9 +9,14 @@ const CardReboBazar = () => {
   
   const [isLoading, setIsLoading] = useState(true);
   const [items, setItems] = useState([]);
+  
 
   useEffect(() => {
-    axios.get("https://pastry.alirezaahmadi.info/api/v1/cats").then((res) => {
+    let params = {
+      sortby:"highestWeight",
+      type:"sell"
+    }
+    axios.post("https://rebo.ir/catalogue/sortby",params).then((res) => {
       setItems(res.data.categories);
       setIsLoading(false);
     });

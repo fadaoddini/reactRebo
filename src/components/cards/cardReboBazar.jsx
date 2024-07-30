@@ -9,29 +9,33 @@ const CardReboBazar = () => {
   
   const [isLoading, setIsLoading] = useState(true);
   const [items, setItems] = useState([]);
-  
-  let params = {
-    sortby:"highestWeight",
-    type:"sell"
-  }
-  axios.post("https://rebo.ir/catalogue/sortby",params).then((res) => {
-    console.log("cardReboBazar========================line20")
-    console.log(res)
-    setItems(res.data);
-    setIsLoading(false);
-  });
+  const [error, setError] = useState(null);
+
   useEffect(() => {
-    let params = {
-      sortby:"highestWeight",
-      type:"sell"
-    }
-    axios.post("https://rebo.ir/catalogue/sortby",params).then((res) => {
-      console.log("cardReboBazar========================line20")
-      console.log(res.data)
-      setItems(res.data);
-      setIsLoading(false);
-    });
+    const fetchData = async () => {
+      try {
+        let params = {
+          sortby: "highestWeight",
+          type: "sell"
+        };
+        const res = await axios.post("https://rebo.ir/catalogue/sortby", params);
+        console.log("cardReboBazar========================line20");
+        console.log(res.data);
+        setItems(res.data);
+      } catch (err) {
+        console.error("An error occurred while fetching data:", err);
+        setError(err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
   }, []);
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
   return (
     <div className={styles.wrapper}>

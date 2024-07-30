@@ -45,18 +45,18 @@ const Card = ({ item }) => {
         src="https://images.unsplash.com/photo-1606830733744-0ad778449672?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzl8fGNocmlzdG1hcyUyMHRyZWV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
         alt=""
       />
-      <h1>خرمای مضافتی درجه یک</h1>
+      <h1>{item.name_type}</h1>
       <div className={styles.top_bider_price_green}>
-        بالاترین پیشنهاد :<span>78000</span> تومان
+        بالاترین پیشنهاد :<span>{item.price}</span> ریال
       </div>
       <div className={styles.price_green}>
-        قیمت :<span>73000</span> تومان
+        قیمت :<span>{item.price}</span> ریال
       </div>
       <div className={styles.package_green}>
         بسته بندی :<span>کارتن 5 کیلویی</span>
       </div>
       <div className={styles.weight_green}>
-        وزن :<span>500</span> کیلوگرم
+        وزن :<span>{item.weight}</span> کیلوگرم
       </div>
       <div className={styles.timer_green}>
         <div className={styles.timer_title_green}>

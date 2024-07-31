@@ -1,56 +1,14 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import styles from "./style_card_shop.module.css";
-import Loading from "../loading/index";
+import React from "react";
+import styles from "./card_horizontal.module.css";
 import CountdownTimer from "../timer/CountdownTimer";
 import clock from "../../assets/images/clock.png";
 import Config from "../../config/config";
 import nopic from "../../assets/images/nopic.png";
 
-const CardReboShop = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [items, setItems] = useState([]);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        let params = {
-          sortby: "highestWeight",
-          type: "etc"
-        };
-
-        const res = await axios.post(`${Config.baseUrl}/catalogue/sortby`, params, {
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        });
-
-        setItems(res.data);
-      } catch (err) {
-        console.error("An error occurred while fetching data:", err);
-        setError(err);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
-
+const CardHorizontal = ({ items }) => {
   return (
     <div className={styles.wrapper}>
-      {isLoading ? (
-        <div>
-          <Loading />
-        </div>
-      ) : (
-        items.map((item) => <Card key={item.id} item={item} />)
-      )}
+      {items.map((item) => <Card key={item.id} item={item} />)}
     </div>
   );
 };
@@ -104,4 +62,4 @@ const Card = ({ item }) => {
   );
 };
 
-export default CardReboShop;
+export default CardHorizontal;

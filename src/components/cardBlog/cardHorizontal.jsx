@@ -1,56 +1,14 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import styles from "./style_card_bazar.module.css";
-import Loading from "../loading/index";
+import React from "react";
+import styles from "./card_horizontal.module.css";
 import CountdownTimer from "../timer/CountdownTimer";
 import clock from "../../assets/images/clock.png";
 import Config from "../../config/config";
 import nopic from "../../assets/images/nopic.png";
 
-const CardReboBazar = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [items, setItems] = useState([]);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        let params = {
-          sortby: "highestWeight",
-          type: "etc"
-        };
-
-        const res = await axios.post(`${Config.baseUrl}/catalogue/sortby`, params, {
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        });
-
-        setItems(res.data);
-      } catch (err) {
-        console.error("An error occurred while fetching data:", err);
-        setError(err);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
-
+const CardHorizontal = ({ items }) => {
   return (
     <div className={styles.wrapper}>
-      {isLoading ? (
-        <div>
-          <Loading />
-        </div>
-      ) : (
-        items.map((item) => <Card key={item.id} item={item} />)
-      )}
+      {items.map((item) => <Card key={item.id} item={item} />)}
     </div>
   );
 };
@@ -61,7 +19,7 @@ const Card = ({ item }) => {
 
   const targetDate = new Date(new Date().getTime() + (0.5 * 24 * 60 * 60 * 1000) + (3 * 60 * 60 * 1000));
   
-  const cardStyle = item.sell_buy === 1 ? styles.card_bazar_red : styles.card_bazar_green;
+  const cardStyle = item.sell_buy === 1 ? styles.card_shop_red : styles.card_shop_green;
   const topBiderPriceStyle = item.sell_buy === 1 ? styles.top_bider_price_red : styles.top_bider_price_green;
   const priceStyle = item.sell_buy === 1 ? styles.price_red : styles.price_green;
   const packageStyle = item.sell_buy === 1 ? styles.package_red : styles.package_green;
@@ -104,4 +62,4 @@ const Card = ({ item }) => {
   );
 };
 
-export default CardReboBazar;
+export default CardHorizontal;

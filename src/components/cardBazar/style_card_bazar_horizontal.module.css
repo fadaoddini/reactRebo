@@ -69,6 +69,7 @@
   color: #E9553D;
   direction: rtl;
   display: inline;
+  
   transition: transform 0.3s, opacity 0.3s;
   transform: translateY(100%); /* پنهان در پایین کارت */
   opacity: 0;

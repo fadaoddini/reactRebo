@@ -1,0 +1,351 @@
+/* استایل‌های مودال با رنگ قرمز */
+.modal_overlay_red {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_content_red {
+  background: rgb(255, 255, 255);
+  border: 1px solid #FFEFEF;
+  border-radius: 8px;
+  width: 500px;
+  height: 300px;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: visible;
+}
+
+.modal_image_red {
+  position: absolute;
+  top: 10%;
+  right: -10%;
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+  border: 1px solid #E9553D;
+  overflow: hidden;
+}
+
+.modal_image_red img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 100%; /* تنظیم ارتفاع تصویر به اندازه container */
+  transform: translate(-50%, -50%); /* مرکز تصویر را تنظیم می‌کند */
+}
+
+.modal_close_red {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #E9553D;
+  z-index: 10;
+}
+
+.modal_details_red {
+  margin-top: 12%;
+  padding: 0 20% 0 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal_details_red h1 {
+  font-size: 1.5rem;
+  text-align: right;
+  margin: 0;
+  padding-right: 10px;
+  color: #E9553D;
+}
+
+.modal_price_red,
+.modal_package_red,
+.modal_weight_red,
+.modal_top_bid_red {
+  padding: 3px 5px;
+  font-size: 1rem;
+  text-align: right;
+  margin-right: 10px;
+  direction: rtl;
+}
+
+.modal_price_red {
+  color: black;
+}
+
+.modal_package_red {
+  color: black;
+}
+
+.modal_weight_red {
+  color: black;
+}
+
+.modal_top_bid_red {
+  border-radius: 5px;
+  background-color: #E9553D;
+  color: #ffffff;
+}
+
+.modal_price_red span,
+.modal_package_red span,
+.modal_weight_red span,
+.modal_top_bid_red span {
+  font-weight: bold;
+  padding-inline: 3px;
+}
+
+.modal_timer_red {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #FFEFEF;
+  color: #E9553D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer_title_red {
+  font-size: 1rem;
+  margin-right: 5px;
+}
+
+.timer_icon_red {
+  width: 30px;
+  background-color: #E9553D;
+  border-radius: 0 5px 0 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer_icon_red img {
+  width: 16px;
+  height: 16px;
+}
+
+.bg_number_bid_red {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 100px;
+  text-align: center;
+  border-radius: 5px 0 9px 0;
+  background-color: #FFEFEF;
+  color: #E9553D;
+  direction: rtl;
+}
+
+.bg_number_bid_red span {
+  color: black;
+  font-size: 1rem;
+  text-align: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  white-space: nowrap;
+  transform: rotate(180deg);
+}
+
+.text_number_bid_red {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  direction: rtl;
+  font-size: 1rem;
+  text-align: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  white-space: nowrap;
+  transform: rotate(180deg);
+}
+
+/* استایل‌های مودال با رنگ سبز */
+.modal_overlay_green {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_content_green {
+  background: rgb(255, 255, 255);
+  border: 1px solid #E3F9E5; /* رنگ سبز روشن برای حاشیه */
+  border-radius: 8px;
+  width: 500px;
+  height: 300px;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: visible;
+}
+
+.modal_image_green {
+  position: absolute;
+  top: 10%;
+  right: -10%;
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+  border: 1px solid #4CAF50; /* رنگ سبز برای حاشیه */
+  overflow: hidden;
+}
+
+.modal_image_green img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 100%; /* تنظیم ارتفاع تصویر به اندازه container */
+  transform: translate(-50%, -50%); /* مرکز تصویر را تنظیم می‌کند */
+}
+
+.modal_close_green {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #4CAF50; /* رنگ سبز برای دکمه بستن */
+  z-index: 10;
+}
+
+.modal_details_green {
+  margin-top: 12%;
+  padding: 0 20% 0 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal_details_green h1 {
+  font-size: 1.5rem;
+  text-align: right;
+  margin: 0;
+  padding-right: 10px;
+  color: #4CAF50; /* رنگ سبز برای عنوان */
+}
+
+.modal_price_green,
+.modal_package_green,
+.modal_weight_green,
+.modal_top_bid_green {
+  padding: 3px 5px;
+  font-size: 1rem;
+  text-align: right;
+  margin-right: 10px;
+  direction: rtl;
+}
+
+.modal_price_green {
+  color: black;
+}
+
+.modal_package_green {
+  color: black;
+}
+
+.modal_weight_green {
+  color: black;
+}
+
+.modal_top_bid_green {
+  border-radius: 5px;
+  background-color: #4CAF50; /* رنگ سبز برای پس‌زمینه */
+  color: #ffffff; /* رنگ سفید برای متن */
+}
+
+.modal_price_green span,
+.modal_package_green span,
+.modal_weight_green span,
+.modal_top_bid_green span {
+  font-weight: bold;
+  padding-inline: 3px;
+}
+
+.modal_timer_green {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #E3F9E5; /* رنگ سبز روشن برای پس‌زمینه */
+  color: #4CAF50; /* رنگ سبز برای متن */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer_title_green {
+  font-size: 1rem;
+  margin-right: 5px;
+}
+
+.timer_icon_green {
+  width: 30px;
+  background-color: #4CAF50; /* رنگ سبز برای پس‌زمینه آیکون تایمر */
+  border-radius: 0 5px 0 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer_icon_green img {
+  width: 16px;
+  height: 16px;
+}
+
+.bg_number_bid_green {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 100px;
+  text-align: center;
+  border-radius: 5px 0 9px 0;
+  background-color: #E3F9E5; /* رنگ سبز روشن برای پس‌زمینه */
+  color: #4CAF50; /* رنگ سبز برای متن */
+  direction: rtl;
+}
+
+.bg_number_bid_green span {
+  color: black;
+  font-size: 1rem;
+  text-align: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  white-space: nowrap;
+  transform: rotate(180deg);
+}
+
+.text_number_bid_green {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  direction: rtl;
+  font-size: 1rem;
+  text-align: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  white-space: nowrap;
+  transform: rotate(180deg);
+}

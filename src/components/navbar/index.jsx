@@ -1,83 +1,112 @@
-import React,{useState}
- from "react";
-import { NavLink }
- from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import styles from "./navbar.module.css";
-import logo from '../../assets/images/logo.png'; // مسیر به لوگوی شما
-
+import logo from "../../assets/images/logo.png"; // مسیر به لوگوی شما
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-  }
-;
-
-  const handleActiveLink = ({isActive}
-)=>
-    isActive ? styles.active : '';
+  };
+  const handleActiveLink = ({ isActive }) => (isActive ? styles.active : "");
 
   return (
-    <header className={styles.header}
->
-      <img src={logo}
- alt="Logo" className={styles.logo}
- />
-      <nav className={styles.navbar_container}
->
-        <ul className={styles.nav_list}
->
-          <li className={styles.nav_item}
->
-            <NavLink to="/" className={handleActiveLink}
->خانه</NavLink>
+    <header className={styles.header}>
+      <img src={logo} alt="Logo" className={styles.logo} />
+      <nav className={styles.navbar_container}>
+        <ul className={styles.nav_list}>
+          <li className={styles.nav_item}>
+            <NavLink to="/" className={handleActiveLink}>
+              خانه
+            </NavLink>
           </li>
-          <li className={styles.nav_item}
->
-            <NavLink to="/bazar" className={handleActiveLink}
->بازار</NavLink>
+          <li className={styles.nav_item}>
+            <NavLink to="/bazar" className={handleActiveLink}>
+              بازار
+            </NavLink>
+          </li>
+          <li className={styles.nav_item}>
+            <NavLink to="/divar" className={handleActiveLink}>
+              دیوار
+            </NavLink>
+          </li>
+          <li className={styles.nav_item}>
+            <NavLink to="/shop" className={handleActiveLink}>
+              فروشگاه
+            </NavLink>
+          </li>
+          <li className={styles.nav_item}>
+            <NavLink to="/profile" className={handleActiveLink}>
+              پروفایل
+            </NavLink>
+          </li>
+          <li className={styles.nav_item}>
+            <NavLink to="/frig" className={handleActiveLink}>
+              سردخانه
+            </NavLink>
+          </li>
+          <li className={styles.nav_item}>
+            <NavLink to="/transport" className={handleActiveLink}>
+              حمل و نقل
+            </NavLink>
+          </li>
+          <li className={styles.nav_item}>
+            <NavLink to="/learn" className={handleActiveLink}>
+              آموزش
+            </NavLink>
+          </li>
+          <li className={styles.nav_item}>
+            <NavLink to="/blog" className={handleActiveLink}>
+              وبلاگ
+            </NavLink>
+          </li>
+          <li className={styles.nav_item}>
+            <NavLink to="/login" className={handleActiveLink}>
+              ورود
+            </NavLink>
+          </li>
+          <li className={styles.nav_item}>
+            <NavLink to="/law" className={handleActiveLink}>
+              قوانین
+            </NavLink>
+          </li>
+          <li className={styles.nav_item}>
+            <NavLink to="/faq" className={handleActiveLink}>
+              سوالات متداول
+            </NavLink>
           </li>
         </ul>
       </nav>
-      <nav className={styles.mobile_navbar_container}
->
-        <ul className={styles.mobile_navbar_list}
->
-          <li className={styles.mobile_nav_item}
->
-            <button className={`${styles.menu_button}
- ${menuOpen ? styles.open : ''}
+      <nav className={styles.mobile_navbar_container}>
+        <ul className={styles.mobile_navbar_list}>
+          <li className={styles.mobile_nav_item}>
+            <button
+              className={`${styles.menu_button}
+ ${menuOpen ? styles.open : ""}
 `}
- onClick={toggleMenu}
->
-              <div className={styles.line1}
-></div>
-              <div className={styles.line2}
-></div>
+              onClick={toggleMenu}
+            >
+              <div className={styles.line1}></div>
+              <div className={styles.line2}></div>
             </button>
           </li>
         </ul>
       </nav>
-      <div className={`${styles.expansionMenu}
- ${menuOpen ? styles.open : ''}
+      <div
+        className={`${styles.expansionMenu}
+ ${menuOpen ? styles.open : ""}
 `}
->
-        <div className={styles.mobile_item_menu_container}
->
-          <ul className={styles.mobile_item_menu}
->
-            <li className={styles.mobile_menu_item}
->
-              <NavLink to="/" className={styles.mobile_menu_item_links}
->
+      >
+        <div className={styles.mobile_item_menu_container}>
+          <ul className={styles.mobile_item_menu}>
+            <li className={styles.mobile_menu_item}>
+              <NavLink to="/" className={styles.mobile_menu_item_links}>
                 خانه
               </NavLink>
             </li>
-            <li className={styles.mobile_menu_item}
->
-              <NavLink to="/bazar" className={styles.mobile_menu_item_links}
->
+            <li className={styles.mobile_menu_item}>
+              <NavLink to="/bazar" className={styles.mobile_menu_item_links}>
                 بازار
               </NavLink>
             </li>
@@ -86,7 +115,5 @@ const NavBar = () => {
       </div>
     </header>
   );
-}
-;
-
+};
 export default NavBar;

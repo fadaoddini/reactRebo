@@ -1449,3 +1449,19 @@ pre {
   .img-size-category{
     width: 100%;
   }
+
+
+  .rtl_fa{
+    direction: rtl;
+    float: right;
+    width: 100%;
+    padding:1% 12%;
+  }
+  .rtl_fa li{
+    color: #403fad;
+    padding:0 2%;
+  }
+  .rtl_fa ul ul li{
+    color: #cc6529 !important;
+    padding:0 4%;
+  }

@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1050; /* اطمینان از بالاتر بودن نسبت به سایر عناصر */
 }
 
 .modal_content {

@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
-import Switch from "../../components/switch/switch";
+
 import axios from "axios";
 import FilteringBazar from "../../components/category/filtering";
-import ImageCard from "../../components/imageCard/imageCard";
-import flag from "../../assets/images/flag.png";
-import mazafati from "../../assets/images/mazafati.jpg";
+import flag from "../../assets/images/flag.png"
+import mazafati from "../../assets/images/mazafati.jpg"
+
 import AdvancedSearch from "../../components/search/AdvancedSearch";
 import AdvertisingOne from "../../components/imageCard/advertisingOne";
 import Loading from "../../components/loading";
 import Config from "../../config/config";
 import CardVertical from "../../components/cardBazar/cardVertical";
 import CardHorizontal from "../../components/cardBazar/cardHorizontal";
+import RightSidebar from "../sidebar/right";
 
 const Index = () => {
   const [displayMode, setDisplayMode] = useState("card"); //card and list display
@@ -85,19 +86,7 @@ const Index = () => {
         </div>
         <div className="col-lg-3">
           <div className="card custom-card margin-top-5 ">
-            <ImageCard
-              image={mazafati}
-              title=" محل تبلیغات کد یک "
-              link="https://example.com"
-              icon={flag}
-            />
-
-            <div className="card-body ">
-              <Switch title=" فروشنده" />
-              <Switch title=" خریدار" />
-              <Switch title=" ارسال رایگان" />
-              <Switch title="شرکتی" />
-            </div>
+            <RightSidebar />
           </div>
         </div>
       </div>

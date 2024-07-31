@@ -1,0 +1,62 @@
+.boxCardSingle {
+  border: 1px solid #FFEFEF;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.boxCardSingle:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.boxCardInner {
+  padding: 15px;
+}
+
+.boxCardTitle {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+  direction: rtl;
+}
+
+.boxCardBtn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fillBtn, .fillBtnOrange {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 0.8rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.fillBtn {
+  background-color: #E9553D;
+  color: #ffffff;
+}
+
+.fillBtn:hover {
+  background-color: #d84433;
+}
+
+.fillBtnOrange {
+  background-color: #FFA500; /* رنگ نارنجی */
+  color: #ffffff;
+}
+
+.fillBtnOrange:hover {
+  background-color: #e59400; /* رنگ نارنجی تیره‌تر */
+}

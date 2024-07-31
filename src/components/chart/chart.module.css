@@ -1,0 +1,88 @@
+.card {
+    border: none;
+  }
+  
+  .cardBody {
+    padding: 1rem;
+  }
+  
+  .dFlex {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .textMuted {
+    color: #6c757d;
+  }
+  
+  .btn {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btnGreen {
+    background-color: green;
+    color: white;
+  }
+  
+  .btnOrange {
+    background-color: orange;
+    color: white;
+  }
+  
+  .btnRed {
+    background-color: red;
+    color: white;
+  }
+  
+  .chartWrapper {
+    position: relative;
+    margin-top: 2rem;
+  }
+  
+  .chartCanvas {
+    width: 100%;
+    height: 300px;
+  }
+  
+  .boxCardSingle {
+    /* اضافه کردن استایل‌های مورد نیاز */
+  }
+  
+  .boxCardWallet {
+    /* اضافه کردن استایل‌های مورد نیاز */
+  }
+  
+  .boxCardInner {
+    text-align: center;
+  }
+  
+  .boxCardTitle {
+    /* اضافه کردن استایل‌های مورد نیاز */
+  }
+  
+  .boxCardBtn {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .fillBtn {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .fillBtnOrange {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  

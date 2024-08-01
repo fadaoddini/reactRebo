@@ -1,0 +1,47 @@
+.tabList {
+    display: flex;
+    direction: rtl;
+    
+    justify-content: start;
+    border-bottom: 1px solid #e59400;
+    margin-bottom: 20px;
+  }
+  
+  .tabList button {
+    background-color: #ffffff; 
+    color: #e59400;
+    width: 100px; /* عرض مناسب برای دکمه‌ها */
+    height: 40px;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e59400;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s, border 0.3s;
+    border: none; /* حذف حاشیه */
+    margin: 0 5px; /* فاصله بین دکمه‌ها */
+  }
+  
+  .tabList button:hover {
+    background-color: #FFA500;
+    color: #ffffff;
+    transform: scale(1.05); /* کمی بزرگتر شود */
+  }
+  
+  .tabList .active {
+    background-color: #FFA500;
+    color: #ffffff;
+    transform: scale(1.05); /* کمی بزرگتر شود */
+    border-bottom: none; /* حذف حاشیه پایین */
+  }
+  
+  .tabContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  

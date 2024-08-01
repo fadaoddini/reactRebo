@@ -61,109 +61,27 @@
   padding-inline: 3px;
 }
 
-.timer_red {
-  width: 140px;
-  height: 25px;
-  border-radius: 5px;
-  background-color: #FFEFEF;
-  color: #E9553D;
-  direction: rtl;
-  display: inline;
-  
-  transition: transform 0.3s, opacity 0.3s;
-  transform: translateY(100%); /* پنهان در پایین کارت */
-  opacity: 0;
-}
-
-.card_shop_red:hover .timer_red {
-  transform: translateY(0); /* به موقعیت اصلی برگردد */
-  opacity: 1;
-}
-
-.timer_title_red {
-  display: inline;
-  font-size: 0.8rem;
-  padding-right: 5%;
-}
-
-.timer_icon_red {
+.add_to_cart_red {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 30px;
+  width: 100%;
+  height: 40px;
+  border-radius: 0 0 8px 8px;
   background-color: #E9553D;
-  border-radius: 0 5px 0 6px;
-  display: inline;
-}
-
-.timer_icon_red img {
-  width: 16px;
-  height: 16px;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  top: 2px;
-  right: 6px;
-}
-.bg_number_bid_red {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 30px;
-  text-align: center;
-  height: 100px;
- 
-  border-radius: 5px 0 9px 0;
-  background-color: #FFEFEF;
-  color: #E9553D;
-  direction: rtl;
-}
-
-.bg_number_bid_red span {
-  color: black;
-  position: absolute;
-  top: 10%;
-  left: 20%;
-  direction: rtl;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
   font-size: 0.8rem;
   text-align: center;
-  writing-mode: vertical-rl; /* متن را به صورت عمودی و از راست به چپ می‌نویسد */
-  text-orientation: mixed; /* تنظیم حروف برای نمایش صحیح */
-  white-space: nowrap; /* جلوگیری از شکستن خطوط */
-  transform: rotate(180deg); /* چرخاندن متن برای نمایش صحیح */
-  direction: rtl; /* تنظیم جهت متن به راست به چپ */
+  transition: background-color 0.3s;
 }
 
-.text_number_bid_red {
-  position: absolute;
-  top: 40%;
-  left: 20%;
-  direction: rtl;
-  font-size: 0.8rem;
-  text-align: center;
-  writing-mode: vertical-rl; /* متن را به صورت عمودی و از راست به چپ می‌نویسد */
-  text-orientation: mixed; /* تنظیم حروف برای نمایش صحیح */
-  white-space: nowrap; /* جلوگیری از شکستن خطوط */
-  transform: rotate(180deg); /* چرخاندن متن برای نمایش صحیح */
-  direction: rtl; /* تنظیم جهت متن به راست به چپ */
+.add_to_cart_red:hover {
+  background-color: #d74329;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .card_shop_green {
   border: 1px solid #E0F7E0;
@@ -228,109 +146,37 @@
   padding-inline: 3px;
 }
 
-.timer_green {
-  width: 140px;
-  height: 25px;
-  border-radius: 5px;
-  background-color: #E0F7E0;
-  color: #4CAF50;
-  direction: rtl;
-  display: inline;
-  transition: transform 0.3s, opacity 0.3s;
-  transform: translateY(100%); /* پنهان در پایین کارت */
-  opacity: 0;
-}
-
-.card_shop_green:hover .timer_green {
-  transform: translateY(0); /* به موقعیت اصلی برگردد */
-  opacity: 1;
-}
-
-.timer_title_green {
-  display: inline;
-  font-size: 0.8rem;
-  padding-right: 5%;
-}
-
-.timer_icon_green {
+.add_to_cart_green {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 30px;
-  background-color: #52c073;
-  border-radius: 0 5px 0 6px;
-  display: inline;
-}
-
-.timer_icon_green img {
-  width: 16px;
-  height: 16px;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  top: 2px;
-  right: 6px;
-}
-
-.bg_number_bid_green {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 30px;
-  text-align: center;
-  height: 100px;
- 
-  border-radius: 5px 0 9px 0;
-  background-color: #efffea;
-  color: #52c073;
-  direction: rtl;
-}
-
-.bg_number_bid_green span {
-  color: black;
-  position: absolute;
-  top: 10%;
-  left: 20%;
-  direction: rtl;
+  width: 100%;
+  height: 40px;
+  border-radius: 0 0 8px 8px;
+  background-color: #4CAF50;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
   font-size: 0.8rem;
   text-align: center;
-  writing-mode: vertical-rl; /* متن را به صورت عمودی و از راست به چپ می‌نویسد */
-  text-orientation: mixed; /* تنظیم حروف برای نمایش صحیح */
-  white-space: nowrap; /* جلوگیری از شکستن خطوط */
-  transform: rotate(180deg); /* چرخاندن متن برای نمایش صحیح */
-  direction: rtl; /* تنظیم جهت متن به راست به چپ */
+  transition: background-color 0.3s;
 }
 
-.text_number_bid_green {
-  position: absolute;
-  top: 40%;
-  left: 20%;
-  direction: rtl;
-  font-size: 0.8rem;
-  text-align: center;
-  writing-mode: vertical-rl; /* متن را به صورت عمودی و از راست به چپ می‌نویسد */
-  text-orientation: mixed; /* تنظیم حروف برای نمایش صحیح */
-  white-space: nowrap; /* جلوگیری از شکستن خطوط */
-  transform: rotate(180deg); /* چرخاندن متن برای نمایش صحیح */
-  direction: rtl; /* تنظیم جهت متن به راست به چپ */
-}
-
-.vertical_text {
-  writing-mode: vertical-rl; /* متن را به صورت عمودی و از راست به چپ می‌نویسد */
-  text-orientation: upright; /* حروف را به صورت عمودی و افقی نشان می‌دهد */
-  transform: rotate(180deg); /* برای چرخاندن متن اگر جهت نوشته اشتباه بود */
-  white-space: nowrap; /* جلوگیری از شکستن خطوط */
+.add_to_cart_green:hover {
+  background-color: #3b8a40;
 }
 
 .wrapper {
   display: grid;
   gap: 0.3rem 1.1rem;
-  grid-template-columns: repeat(4, 1fr); /* سه ستون برای اندازه‌های بزرگ */
+  grid-template-columns: repeat(4, 1fr); /* چهار ستون برای اندازه‌های بزرگ */
 }
 
 @media (max-width: 1400px) {
   .wrapper {
-    grid-template-columns: repeat(3, 1fr); /* دو ستون برای اندازه‌های متوسط */
+    grid-template-columns: repeat(3, 1fr); /* سه ستون برای اندازه‌های متوسط */
   }
 }
 
@@ -345,5 +191,3 @@
     grid-template-columns: repeat(1, 1fr); /* یک ستون برای اندازه‌های کوچک */
   }
 }
-
-

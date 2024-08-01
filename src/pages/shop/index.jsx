@@ -1,39 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
+import Loading from "../../components/loading";
+import Tabs from "../../components/cardShop/Tabs";
+import RightSidebar from "../sidebar/right";
 
 const Shop = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
+
+
+
+
   return (
-    <div className="rtl_fa">
-      <p> ثبت نام فروشگاه</p>
-      <ul>
-        <li>نام فروشگاه </li>
-        <li>نام مسئول فروشگاه</li>
-        <li>شماره تماس مسئول</li>
-        <li>کارت ملی</li>
-        <li>پذیرش قوانین فروشگاه</li>
-        <li>لوگو</li>
-        <li>شماره شبا </li>
-        <li>شماره کارت </li>
-        <li>شماره حساب</li>
-        <li>آدرس</li>
-        <li>پرداخت هزینه ثابت فروشگاه به صورت ماهیانه - سه ماهه - شش ماهه</li>
-        <li>فعال : غیر فعال</li>
-      </ul>
-
-      <p> امکانات هر فروشگاه</p>
-      <ul>
-        <li>نوع محصول </li>
-        <li> تصویر محصول </li>
-        <li>تعداد قابل فروش : موجودی محصول  </li>
-        <li>بسته بندی </li>
-        <li>وزن محصول  </li>
-        <li>محدودیت ارسال : 3 بسته</li>
-        <li> قیمت هر بسته </li>
-        <li>تخفیف درصدی  </li>
-        <li>حق بازاریابی این محصول : درصدی</li>
-        <li>فعال : غیر فعال</li>
-      </ul>
-
-
+    <div className="container">
+      <div className="row">
+        <div className="col-lg-9">
+          <div className="card custom-card margin-top-5">
+            {isLoading ? (
+              <Loading />
+            ) : (
+              <div className="card-body">
+             
+             <Tabs />
+            
+              </div>
+            )}
+          </div>
+        </div>
+        <div className="col-lg-3">
+          <div className="card custom-card margin-top-5 ">
+            <RightSidebar />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

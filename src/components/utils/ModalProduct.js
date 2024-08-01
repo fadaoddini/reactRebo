@@ -3,14 +3,17 @@ import Config from "../../config/config";
 import styles from "./style_modal_product.module.css"; // استایل‌های مربوط به Modal
 import CountdownTimer from "../timer/CountdownTimer";
 import nopic from "../../assets/images/nopic.png";
-import clock from "../../assets/images/clock.png";
+
 
 const ModalDetails = ({ isOpen, onClose, item, isRed }) => {
   if (!isOpen || !item) return null; // جلوگیری از رندر کردن اگر item نداشته باشیم
 
   const packaging = item.attr_value.find(attr => attr.key === 'بسته بندی');
-  const targetDate = new Date(new Date().getTime() + (0.5 * 24 * 60 * 60 * 1000) + (3 * 60 * 60 * 1000));
+  
+  // استفاده از تاریخ‌های موجود در item
+  const targetDate = new Date(item.finished_time); // تاریخ پایان از API
 
+  // تنظیم کلاس‌های استایل بر اساس وضعیت isRed
   const overlayClass = isRed ? styles.modal_overlay_red : styles.modal_overlay_green;
   const contentClass = isRed ? styles.modal_content_red : styles.modal_content_green;
   const imageClass = isRed ? styles.modal_image_red : styles.modal_image_green;
@@ -31,7 +34,10 @@ const ModalDetails = ({ isOpen, onClose, item, isRed }) => {
       <div className={contentClass}>
         <button className={closeClass} onClick={onClose}>×</button>
         <div className={imageClass}>
-          <img src={item.images.length > 0 ? `${Config.baseUrl}${item.images[0].image}` : nopic} alt={item.name_type} />
+          <img 
+            src={item.images.length > 0 ? `${Config.baseUrl}${item.images[0].image}` : nopic} 
+            alt={item.name_type} 
+          />
         </div>
         <div className={detailsClass}>
           <h1>{item.name_type}</h1>
@@ -51,7 +57,7 @@ const ModalDetails = ({ isOpen, onClose, item, isRed }) => {
             <div className={timerTitleClass}>
               <CountdownTimer targetDate={targetDate} />
             </div>
-            <span>زمان باقیمانده </span>
+            <span>زمان باقیمانده</span>
           </div>
         </div>
       </div>

@@ -34,6 +34,7 @@ const CardHorizontal = ({ items }) => {
 
   const handleBidSubmit = (amount) => {
     console.log(`Bid for item ${currentItem.id}: ${amount}`);
+    closeBidModal(); // Close the bid modal after submission
   };
 
   return (
@@ -65,7 +66,9 @@ const CardHorizontal = ({ items }) => {
 const Card = ({ item, onBidClick, onDetailsClick }) => {
   const packaging = item.attr_value.find(attr => attr.key === 'بسته بندی');
   const imageUrl = item.images.length > 0 ? `${Config.baseUrl}${item.images[0].image}` : nopic;
-  const targetDate = new Date(new Date().getTime() + (0.5 * 24 * 60 * 60 * 1000) + (3 * 60 * 60 * 1000));
+  
+  // استفاده از تاریخ‌های موجود در item
+  const targetDate = new Date(item.finished_time); // تاریخ پایان از API
 
   const isRed = item.sell_buy === 1;
   const cardStyle = isRed ? styles.card_shop_red : styles.card_shop_green;

@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* قرار دادن مودال در بالای سایر عناصر */
+  z-index: 1000;
 }
 
 .modalContent {
@@ -20,7 +20,6 @@
   max-width: 600px;
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  /* کپی کردن استایل از card_bazar_red */
   border: 1px solid #FFEFEF;
 }
 
@@ -45,14 +44,17 @@
   background: #d84433;
 }
 
-h2 {
-  font-size: 1.2rem;
+.h2 {
+  font-size: 1rem;
   margin-bottom: 15px;
+  text-align: center;
   color: #333;
 }
 
 .buttonGroup {
-  margin-bottom: 15px;
+  margin: 10px auto 20px;
+  text-align: center;
+  padding: 0;
 }
 
 .timeButton {
@@ -68,9 +70,68 @@ h2 {
 }
 
 .timeButton:hover {
-  background-color: #d84433;
+  background-color: #ffffff;
+  border: 1px solid #d84433;
+  color: #d84433;
 }
 
 .timeButton:focus {
   outline: none;
+}
+
+.connectWalletWrapper {
+  width: 100%;
+}
+
+.innerBody {
+  padding: 20px;
+}
+
+.activityWrapperActionSingleSuccess,
+.activityWrapperActionSingleDanger {
+  background: #FFEFEF;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #E9553D;
+}
+
+.activityWrapperActionSingleSuccess .activity3dotsMenu,
+.activityWrapperActionSingleDanger .activity3dotsMenu {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.activityMetaText {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.activityMetaText a {
+  text-decoration: none;
+  color: #E9553D;
+}
+
+.btnSuccess {
+  background-color: #28a745;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.btnDanger {
+  background-color: #dc3545;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
 }

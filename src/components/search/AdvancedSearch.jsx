@@ -1,61 +1,100 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Select from 'react-select';
-import styles from './CardWithSearch.module.css'; // اطمینان حاصل کنید که مسیر درست است
+import styles from './CardWithSearch.module.css';
+import Config from "../../config/config";
 
-const AdvancedSearch = () => {
-    // داده‌ها برای select ها
-    const marketOptions = [
-      { value: 'buyers', label: 'خریداران' },
-      { value: 'sellers', label: 'فروشندگان' },
-    ];
-  
-    const categoryOptions = [
-      { value: '1', label: 'خرمای مضافتی زیر 6 کیلو گرم' },
-      { value: '2', label: 'خرمای مضافتی 6 تا 6.5 کیلوگرم' },
-      { value: '3', label: 'خرمای مضافتی 6.5 تا 7 کیلوگرم' },
-      { value: '4', label: 'خرمای مضافتی 7 تا 7.5 کیلوگرم' },
-      { value: '5', label: 'خرمای مضافتی 7.5 تا 8 کیلوگرم' },
-      { value: '6', label: 'خرمای مضافتی بالای 8 کیلو گرم' },
-    ];
-  
-    const priceOptions = [
-      { value: 'top', label: 'بیشترین' },
-      { value: 'low', label: 'کمترین' },
-    ];
-  
-    const handleChange = (selectedOption) => {
-      console.log('Selected option:', selectedOption);
+const AdvancedSearch = ({ onSearch }) => {
+    const [categoryOptions, setCategoryOptions] = useState([]);
+    const [marketOptions] = useState([
+        { value: 'None', label: 'همه' },
+        { value: '2', label: 'خریداران' },
+        { value: '1', label: 'فروشندگان' },
+    ]);
+    const [priceOptions] = useState([
+        { value: 'None', label: 'همه' },
+        { value: 'top', label: 'بیشترین' },
+        { value: 'low', label: 'کمترین' },
+    ]);
+
+    const [selectedMarketOption, setSelectedMarketOption] = useState({ value: 'None', label: 'همه' });
+    const [selectedCategoryOption, setSelectedCategoryOption] = useState({ value: 'None', label: 'همه' });
+    const [selectedPriceOption, setSelectedPriceOption] = useState({ value: 'None', label: 'همه' });
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch(`${Config.baseUrl}/catalogue/all_types`);
+                const data = await response.json();
+
+                const formattedOptions = [
+                    { value: 'None', label: 'همه' },
+                    ...data.map(item => ({
+                        value: item.id,
+                        label: item.title
+                    }))
+                ];
+                
+                setCategoryOptions(formattedOptions);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+    const handleMarketChange = (selectedOption) => {
+        setSelectedMarketOption(selectedOption);
     };
-  
+
+    const handleCategoryChange = (selectedOption) => {
+        setSelectedCategoryOption(selectedOption);
+    };
+
+    const handlePriceChange = (selectedOption) => {
+        setSelectedPriceOption(selectedOption);
+    };
+
+    const handleSearch = () => {
+        onSearch({
+            bazar: selectedMarketOption.value,
+            type: selectedCategoryOption.value,
+            price: selectedPriceOption.value
+        });
+    };
+
     return (
-      <div className={styles.advancedSearchContainer}>
-        <Select
-          options={marketOptions}
-          onChange={handleChange}
-          className={`${styles.selectItem} ${styles.selectControl}`}
-          classNamePrefix="select"
-          isClearable
-          placeholder="انتخاب کنید"
-        />
-        <Select
-          options={categoryOptions}
-          onChange={handleChange}
-          className={`${styles.categorySelectItem} ${styles.selectControl}`}
-          classNamePrefix="select"
-          isClearable
-          placeholder="انتخاب کنید"
-        />
-        <Select
-          options={priceOptions}
-          onChange={handleChange}
-          className={`${styles.selectItem} ${styles.selectControl}`}
-          classNamePrefix="select"
-          isClearable
-          placeholder="انتخاب کنید"
-        />
-        <button className={styles.searchButton} type="submit">جستجو</button>
-      </div>
+        <div className={styles.advancedSearchContainer}>
+            <Select
+                options={marketOptions}
+                onChange={handleMarketChange}
+                value={selectedMarketOption}
+                className={`${styles.selectItem} ${styles.selectControl}`}
+                classNamePrefix="select"
+                isClearable
+                placeholder="انتخاب کنید"
+            />
+            <Select
+                options={categoryOptions}
+                onChange={handleCategoryChange}
+                value={selectedCategoryOption}
+                className={`${styles.categorySelectItem} ${styles.selectControl}`}
+                classNamePrefix="select"
+                isClearable
+                placeholder="انتخاب کنید"
+            />
+            <Select
+                options={priceOptions}
+                onChange={handlePriceChange}
+                value={selectedPriceOption}
+                className={`${styles.selectItem} ${styles.selectControl}`}
+                classNamePrefix="select"
+                isClearable
+                placeholder="انتخاب کنید"
+            />
+            <button className={styles.searchButton} type="button" onClick={handleSearch}>جستجو</button>
+        </div>
     );
-  };
-  
-  export default AdvancedSearch;
+};
+
+export default AdvancedSearch;

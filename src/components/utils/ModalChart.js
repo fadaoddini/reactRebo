@@ -102,7 +102,7 @@ const Modal = ({ isOpen, onClose }) => {
     <div className={styles.modalOverlay}>
       <div className={styles.modalContent}>
         <button className={styles.closeButton} onClick={onClose}>x</button>
-        <h2>نمودار روند قیمت</h2>
+        {/* <h2>نمودار روند قیمت</h2> */}
         <div className={styles.buttonGroup}>
           <button 
             className={styles.timeButton}

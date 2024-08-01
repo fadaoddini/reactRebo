@@ -8,6 +8,7 @@
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
+  direction: rtl;
   align-items: center;
   z-index: 1050; /* اطمینان از بالاتر بودن نسبت به سایر عناصر */
 }
@@ -16,8 +17,8 @@
   background: rgb(255, 255, 255);
   border: 1px solid #FFEFEF;
   border-radius: 8px;
-  width: 500px;
-  height: 300px;
+  width: 300px;
+  height: 400px;
   position: relative;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   overflow: visible;
@@ -25,9 +26,9 @@
 
 .modal_image_red {
   position: absolute;
-  top: 10%;
-  right: -10%;
-  width: 150px;
+  top: 2%;
+  right: 25%;
+  width: 50%;
   height: 150px;
   border-radius: 15px;
   border: 1px solid #E9553D;
@@ -56,17 +57,16 @@
 }
 
 .modal_details_red {
-  margin-top: 12%;
-  padding: 0 20% 0 10%;
+  margin-top: 62%;
+  padding: 0 5% 0 5%;
   display: flex;
   flex-direction: column;
 }
 
 .modal_details_red h1 {
-  font-size: 1.5rem;
-  text-align: right;
-  margin: 0;
-  padding-right: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin:0 0 5% 0;
   color: #E9553D;
 }
 
@@ -76,8 +76,7 @@
 .modal_top_bid_red {
   padding: 3px 5px;
   font-size: 1rem;
-  text-align: right;
-  margin-right: 10px;
+  text-align: center;
   direction: rtl;
 }
 
@@ -175,12 +174,23 @@
   transform: rotate(180deg);
 }
 
+
+
+
+
+
+
+
+
+
+
 /* استایل‌های مودال با رنگ سبز */
 .modal_overlay_green {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  direction: rtl;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
@@ -192,8 +202,8 @@
   background: rgb(255, 255, 255);
   border: 1px solid #E3F9E5; /* رنگ سبز روشن برای حاشیه */
   border-radius: 8px;
-  width: 500px;
-  height: 300px;
+  width: 300px;
+  height: 400px;
   position: relative;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   overflow: visible;
@@ -201,9 +211,9 @@
 
 .modal_image_green {
   position: absolute;
-  top: 10%;
-  right: -10%;
-  width: 150px;
+  top: 2%;
+  right: 25%;
+  width: 50%;
   height: 150px;
   border-radius: 15px;
   border: 1px solid #4CAF50; /* رنگ سبز برای حاشیه */
@@ -232,17 +242,16 @@
 }
 
 .modal_details_green {
-  margin-top: 12%;
-  padding: 0 20% 0 10%;
+  margin-top: 62%;
+  padding: 0 5% 0 5%;
   display: flex;
   flex-direction: column;
 }
 
 .modal_details_green h1 {
-  font-size: 1.5rem;
-  text-align: right;
-  margin: 0;
-  padding-right: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin:0 0 5% 0;
   color: #4CAF50; /* رنگ سبز برای عنوان */
 }
 

@@ -9,16 +9,14 @@ const RightSidebarBazar = () => {
     <div>
       <ImageCard
         image={mazafati}
-        title=" محل تبلیغات کد یک "
+        title="   محل تبلیغات کد سه (ماهیانه 5,000,000تومان) "
+
         link="https://example.com"
         icon={flag}
       />
 
       <div className="card-body ">
-        <Switch title=" فروشنده" />
-        <Switch title=" خریدار" />
-        <Switch title=" ارسال رایگان" />
-        <Switch title="شرکتی" />
+        بزودی تکمیل می شود...
       </div>
     </div>
   );

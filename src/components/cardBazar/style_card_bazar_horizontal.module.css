@@ -1,5 +1,5 @@
 .card_shop_red {
-  border: 1px solid #FFEFEF;
+  border: 1px solid #ff9d9d;
   border-radius: 8px;
   width: 220px;
   cursor: pointer;
@@ -112,7 +112,9 @@
   width: 30px;
   text-align: center;
   height: 100px;
- 
+  border-right: 1px solid #ff9d9d;
+  border-bottom: 1px solid #ff9d9d;
+
   border-radius: 5px 0 9px 0;
   background-color: #FFEFEF;
   color: #E9553D;
@@ -279,7 +281,8 @@
   width: 30px;
   text-align: center;
   height: 100px;
- 
+  border-right: 1px solid #b2e6b2;
+  border-bottom: 1px solid #b2e6b2;
   border-radius: 5px 0 9px 0;
   background-color: #efffea;
   color: #52c073;

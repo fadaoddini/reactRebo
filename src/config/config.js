@@ -1,5 +1,5 @@
 const config = {
-    baseUrl: 'http://localhost:8000',
+    baseUrl: 'http://rebo.ir',
     apiVersion: 'v1',
     // افزودن تنظیمات دیگر به اینجا
   };

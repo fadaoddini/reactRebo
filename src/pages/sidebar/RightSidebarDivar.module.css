@@ -1,0 +1,195 @@
+/* Container for the sidebar */
+.sidebarContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #f8f8f8;
+  }
+  
+  /* Main card body styles */
+  .cardBody {
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ffa412;
+    color: #555;
+    direction: rtl;
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* List styles */
+  .categoryList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Category item styles */
+  .categoryItem {
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+  }
+  
+  /* Link styles within category items */
+  .categoryItem a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    padding: 6px 4px; /* Increased padding for better spacing */
+    border-radius: 6px; /* Rounded corners for better look */
+    transition: color 0.3s, background-color 0.3s; /* Smooth transition for color and background color */
+  }
+  
+  /* Icon styles */
+  .iconWrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px; /* Increased size for the icon circle */
+    height: 24px; /* Increased size for the icon circle */
+    background-color: #ffa412;
+    border-radius: 50%;
+    padding: 2px;
+    margin-left: 10px;
+    font-size: 12px; /* Adjusted icon size */
+    transition: background-color 0.3s; /* Smooth background color change on hover */
+  }
+  
+  .categoryIcon {
+    color: #fff;
+    font-size: 15sp; /* Adjusted size for the icon */
+  }
+  
+  /* Hover effect for category items */
+  .categoryItem:hover a {
+    background-color: transparent; /* No background color on hover */
+    color: #ffa412; /* Change text color on hover */
+  }
+  
+  /* Active item styles */
+  .active > a {
+    color: #ffa412;
+  }
+  
+  /* Sub-category styles */
+  .subCategoryList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-right: 22px; /* Increased indentation for sub-categories */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease; /* Smooth transition for expanding */
+    opacity: 0;
+  }
+  
+  /* Sub-category item styles */
+  .subCategoryItem {
+    margin-bottom: 6px;
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  /* Link styles within sub-category items */
+  .subCategoryItem a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px; /* Smaller font size for sub-category items */
+    padding: 8px 0; /* Padding for better spacing */
+    border-radius: 4px; /* Rounded corners for better look */
+    transition: color 0.3s; /* Smooth color change on hover */
+  }
+  
+  /* Hover effect for sub-category items */
+  .subCategoryItem a:hover {
+    color: #ffa412;
+    transform: translateX(-6px); /* Slightly move to the left on hover */
+  }
+  
+  /* Show sub-category list when parent is active */
+  .categoryItem.active .subCategoryList {
+    opacity: 1;
+    max-height: 500px; /* Adjust based on the number of sub-categories */
+  }
+  
+  /* Divider styles */
+  .divider {
+    border: none;
+    border-top: 1px solid #eaeaea;
+    margin: 20px 0;
+  }
+  
+  /* Filter form styles */
+  .filterForm {
+    margin-top: 20px;
+  }
+  
+  .filterSection {
+    margin-bottom: 20px;
+  }
+  
+  .filterTitle {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .filterContent {
+    padding-left: 10px;
+  }
+  
+  .filterRow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .filterRow label {
+    margin-right: 10px;
+  }
+  
+  .currency {
+    margin-left: 5px;
+  }
+  
+  .toggleLabel {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .sidebarFooter {
+    margin-top: 30px;
+  }
+  
+  .footerLinks h2,
+  .socialLinks h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .footerLinks a,
+  .socialLinks a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .footerLinks a:hover,
+  .socialLinks a:hover {
+    color: #ffa412;
+  }
+  
+  .socialLinks a {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .socialLinks i {
+    font-size: 24px;
+  }
+  

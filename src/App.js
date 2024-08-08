@@ -1,5 +1,7 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import PrivateRoute from "./components/PrivateRoute";
+import RedirectRoute from "./components/RedirectRoute"; // اضافه کردن RedirectRoute
 import "./assets/css/default.css";
 import Bazar from "./pages/bazar";
 import Index from "./pages/index";
@@ -15,31 +17,39 @@ import Faq from "./pages/faq";
 import Transport from "./pages/transport";
 import NavBar from "./components/navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./assets/css/default.css";
 import ChartComponent from "./components/chart/ChartComponent";
+import Verify from "./pages/login/verify";
 
 const App = () => {
+  const location = useLocation();
+
+  // مسیرهایی که NavBar نباید در آن‌ها نمایش داده شود
+  const hideNavBarPaths = ["/login", "/verify"];
+
+  // بررسی اینکه آیا مسیر فعلی در لیست مسیرهای مخفی قرار دارد یا خیر
+  const hideNavBar = hideNavBarPaths.includes(location.pathname);
+
   return (
     <>
-      <NavBar />
+      {!hideNavBar && <NavBar />}
       <Routes>
-        
-          <Route path="/chart/report/:id" component={ChartComponent} />
-          <Route path="/" Component={Index} />
-          <Route path="/bazar" Component={Bazar} />
-          <Route path="/divar" Component={Divar} />
-          <Route path="/profile" Component={Profile} />
-          <Route path="/frig" Component={Frig} />
-          <Route path="/shop" Component={Shop} />
-          <Route path="/transport" Component={Transport} />
-          <Route path="/blog" Component={Blog} />
-          <Route path="/learn" Component={Learn} />
-          <Route path="/login" Component={Login} />
-          <Route path="/law" Component={Law} />
-          <Route path="/faq" Component={Faq} />
-       
+        <Route path="/chart/report/:id" element={<ChartComponent />} />
+        <Route path="/" element={<Index />} />
+        <Route path="/bazar" element={<PrivateRoute element={<Bazar />} />} />
+        <Route path="/divar" element={<Divar />} />
+        <Route path="/profile" element={<PrivateRoute element={<Profile />} />} />
+        <Route path="/frig" element={<Frig />} />
+        <Route path="/shop" element={<PrivateRoute element={<Shop />} />} />
+        <Route path="/transport" element={<Transport />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/learn" element={<Learn />} />
+        <Route path="/login" element={<RedirectRoute element={<Login />} />} />
+        <Route path="/verify" element={<RedirectRoute element={<Verify />} />} />
+        <Route path="/law" element={<Law />} />
+        <Route path="/faq" element={<Faq />} />
       </Routes>
     </>
   );
 };
+
 export default App;

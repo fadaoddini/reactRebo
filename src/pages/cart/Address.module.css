@@ -1,0 +1,164 @@
+/* Address.module.css */
+
+/* استایل برای کارت کلی */
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  direction: rtl;
+  margin: 20px;
+}
+p {
+    margin: 0;
+}
+.card {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border: 1px solid #ffa412;
+  display: flex;
+  gap: 20px;
+}
+
+/* استایل برای پنل سمت چپ */
+.leftPanel {
+  width: 35%;
+  background-color: #ffedcf;
+  padding: 1%;
+  border: 1px solid #ffa412;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* استایل برای فرم */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* استایل برای ردیف‌های فرم */
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* فاصله بین آیتم‌ها در هر ردیف */
+}
+
+/* استایل برای گروه‌های ورودی */
+.inputGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.custom_input {
+   
+    border: 1px solid #ffa412;
+  border-radius: 5px;
+    height: 50px; /* ارتفاع دلخواه */
+    font-size: 0.7rem;
+    /* می‌توانید سایر ویژگی‌ها مانند padding، margin و غیره را نیز اضافه کنید */
+  }
+  
+
+label {
+  margin-bottom: 2px;
+  font-size: 1rem;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 2px;
+  font-size: 1rem;
+  border: 1px solid #ffa412;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-top: 5px;
+}
+
+.submitButton {
+  background-color: #ffa412;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.submitButton:hover {
+  background-color: #e59400;
+}
+
+/* استایل برای پنل سمت راست */
+.rightPanel {
+  width: 70%;
+}
+
+/* استایل برای آیتم‌های لیست آدرس‌ها */
+.cardItem {
+  margin-bottom: 15px; /* کاهش فاصله بین آیتم‌ها */
+  border: 1px solid #ffa412;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem; /* کاهش سایز فونت */
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* فاصله بین ردیف‌ها */
+}
+
+.cardActions {
+  display: flex;
+  gap: 5px; /* فاصله بین دکمه‌ها */
+  margin-top: 10px; /* فاصله بالای دکمه‌ها */
+}
+
+
+.editButton {
+    background-color: #FFA412;
+    border-radius: 5px;
+    padding: 4px 14px;
+    font-size: 0.8rem;
+    margin: 6px;
+    color: #fff;
+  }
+  
+  .editButton:hover {
+    background-color: #e59400;
+  }
+  
+  .deleteButton {
+    background-color: #f44336;
+    color: #fff;
+    border-radius: 5px;
+    padding: 4px 14px;
+    font-size: 0.8rem;
+    margin: 6px;
+  }
+  
+  .deleteButton:hover {
+    background-color: #d32f2f;
+  }
+  
+  .selectButton {
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 5px;
+    padding: 4px 14px;
+    font-size: 0.8rem;
+    margin: 6px;
+  }
+  
+  .selectButton:hover {
+    background-color: #388E3C;
+  }

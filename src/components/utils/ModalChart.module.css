@@ -1,0 +1,96 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  direction: rtl;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 90%;
+  max-width: 700px;
+  position: relative;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  border: 1px solid #E2E2E2;
+}
+
+.closeButton {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #E9553D;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.closeButton:hover {
+  background: #d84433;
+}
+
+.h2 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.timeButton {
+  background-color: #E9553D;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 25px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.timeButton:hover {
+  background-color: #ffffff;
+  border: 1px solid #d84433;
+  color: #d84433;
+  transform: scale(1.05);
+}
+
+.timeButton:focus {
+  outline: none;
+}
+
+.statsSummary {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #E2E2E2;
+}
+
+.statsSummary p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #333;
+}

@@ -1,0 +1,80 @@
+.container {
+    display: flex;
+    overflow-x: hidden; /* پنهان کردن نوار اسکرول */
+    padding: 10px;
+    background-color: #fff7e6;
+    scroll-behavior:smooth;
+    direction: rtl;
+    position: relative;
+    transition: all 0.2s ease-in-out; /* اضافه کردن ترنزیشن برای نرم‌تر شدن حرکت */
+
+  }
+  
+  h3 {
+    font-size: 0.9rem !important;
+    font-weight: bold !important;
+  }
+  
+  .card {
+    position: relative;
+    min-width: 220px;
+    height: 350px;
+    margin: 0 5px;
+    background-color: #fff;
+    border: 1px solid #f39c12;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .image_container {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin-top: 10px;
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .dots {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 5px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #f39c12;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: #f39c12;
+  }
+  
+  .info {
+    text-align: center;
+    font-size: 0.7rem;
+    padding: 10px;
+  }
+  
+  .slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex: 1;
+  }
+  

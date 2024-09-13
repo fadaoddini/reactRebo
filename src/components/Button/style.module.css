@@ -1,0 +1,45 @@
+/* استایل دکمه */
+.buttonPrimary {
+    display: block;
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff !important;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 8px; /* فاصله پایین دکمه */
+  }
+  
+  .buttonPrimary:hover {
+    background-color: #0056b3 !important;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .buttonPrimary:active {
+    background-color: #004085 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+  }
+  
+  .buttonPrimary:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.5) !important;
+  }
+  
+  /* استایل متن توضیحات */
+  .buttonDescription {
+    display: block;
+    font-size: 0.8rem;
+    color: #6c757d; /* رنگ متن توضیحات */
+    text-align: center;
+    margin-top: 4px; /* فاصله بالا متن توضیحات */
+    line-height: 1.4; /* فاصله خطوط متن توضیحات */
+  }
+  

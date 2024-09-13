@@ -1,0 +1,79 @@
+/* ImageUploader.module.css */
+
+.dropzone {
+    padding: 20px;
+    border: 2px dashed #ff9d9d;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.dropzone:hover {
+    border-color: #E9553D;
+}
+
+/* بخش پیش‌نمایش تصویر */
+.image_preview_section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* لیست تصاویر */
+.image_preview_list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* استایل برای هر آیتم تصویر در لیست */
+.image_list_item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ff9d9d;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 5px;
+    background-color: #fff;
+    position: relative;
+}
+
+/* دکمه حذف */
+.remove_button {
+    background-color: #E9553D;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    width: 30px; /* عرض دکمه */
+    height: 30px; /* ارتفاع دکمه */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px; /* اندازه متن */
+    transition: background-color 0.3s;
+    margin-left: 10px; /* فاصله از تصویر */
+    position: absolute;
+    left: 10px; /* موقعیت دکمه در سمت راست */
+    top: 50%;
+    transform: translateY(-50%); /* وسط چیدن دکمه عمودی */
+}
+
+/* تغییر رنگ دکمه هنگام hover */
+.remove_button:hover {
+    background-color: #ff9d9d;
+}
+
+.remove_button:before {
+    content: "×";
+}
+
+/* تصویر در لیست */
+.image_list_item img {
+    width: 50px; /* عرض تصویر */
+    height: 50px; /* ارتفاع تصویر */
+    object-fit: cover;
+    border-radius: 8px;
+}

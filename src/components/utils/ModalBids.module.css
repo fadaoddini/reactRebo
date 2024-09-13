@@ -1,0 +1,163 @@
+/* استایل‌های کلی مودال */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    direction: rtl;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px; /* افزایش عرض برای فضا بیشتر */
+    max-height: 80%; /* اضافه شده برای اسکرول */
+    overflow-y: auto; /* اضافه شده برای اسکرول */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #FFEFEF;
+    display: flex;
+    flex-direction: column; /* نمایش به صورت عمودی */
+    gap: 20px; /* فاصله بین اجزا */
+}
+
+.modalContent::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modalContent::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.modalContent::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.modalContent::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #E9553D;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 2px 10px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.closeButton:hover {
+    background: #d84433;
+}
+
+.satr {
+    font-size: 1.2rem; /* تغییر سایز برای عنوان */
+    margin-bottom: 20px; /* فاصله از بخش‌های دیگر */
+    text-align: center; /* وسط چین کردن عنوان */
+    color: #333;
+    font-weight: bold; /* ضخیم کردن متن */
+    width: 100%; /* عرض کامل مودال */
+}
+
+.columnsWrapper {
+    display: flex;
+    gap: 20px; /* فاصله بین ستون‌ها */
+}
+
+.column {
+    flex: 1; /* عرض ستون‌ها به صورت مساوی */
+    min-width: 300px; /* حداقل عرض برای هر ستون */
+    background-color: #f8f8f8;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #d0d0d0;
+}
+
+.bidList {
+    list-style: none;
+    padding: 5px;
+    margin: 0;
+}
+
+.bidItem {
+    border-radius: 5px;
+    padding: 5px !important;
+    margin-bottom: 10px;
+    font-size: 0.8rem; /* فونت ریز برای محتوای فعالیت‌ها */
+    display: flex;
+    color: #555 !important;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative; /* اضافه شده برای استفاده از position: absolute در فرزندان */
+}
+
+.buy {
+    border: 1px solid #dc3545;
+    background-color: #ffffff;
+}
+
+.sell {
+
+    border: 1px solid #28a745;
+    background-color: #ffffff;
+
+
+   
+}
+
+.bidItem img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.mob {
+    padding: 5px;
+    position: absolute; /* موقعیت ثابت نسبت به bidItem */
+    left: 10px; /* موقعیت افقی از سمت راست */
+    top: 50%; /* موقعیت عمودی از بالای bidItem */
+    transform: translateY(-50%); /* وسط‌چینی عمودی */
+}
+
+.mob img {
+    border: 1px solid #cbcbcb;
+    background-color: #ffffff;
+    width: 24px;
+    padding: 5px;
+    height: 24px;
+    border-radius: 5px;
+}
+
+.mob img:hover {
+    border: 1px solid #00671b;
+    background-color: #c5ffdd;
+    
+}
+
+.stronger {
+    color: #000 !important;
+    font-weight: bold !important;
+}
+h3{
+    text-align: center;
+    font-size: 1rem !important;
+}

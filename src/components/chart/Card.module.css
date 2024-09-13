@@ -1,0 +1,106 @@
+.boxCardSingle {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* جلوگیری از overflow محتوا */
+  border-radius: 7px;
+  overflow: visible; /* جلوگیری از overflow محتوا */
+  background: linear-gradient(135deg, #b6b6b6 75%, #ffbc14 25%);
+  margin-bottom: 10px; /* برای فاصله‌گذاری پایین */
+  margin-top: 10px; /* برای فاصله‌گذاری پایین */
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.boxCardSingle:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #b6b6b6 10%, #ffbc14 90%);
+}
+
+.boxCardInner {
+  display: flex;
+  position: relative;
+  padding: 7px;
+  box-sizing: border-box;
+}
+
+.boxCardTitle {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid #eebb21;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 2px;
+  border-radius: 5px;
+  color: #333;
+  font-size: 0.7rem;
+  direction: rtl;
+}
+
+.boxCardBtn {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+.fillBtn {
+  display: inline-block;
+  padding: 2px;
+  border-radius: 5px;
+  margin-right: 5px;
+  text-align: center;
+  font-size: 0.8rem;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: visible; /* اطمینان از نمایش کامل badge */
+  transition: background-color 0.3s, color 0.3s;
+  background-color: #ffffff;
+  color: #333; /* رنگ متن دکمه برای وضوح بیشتر */
+  box-shadow: inset 0 0px 4px rgba(0, 0, 0, 0.3); /* سایه داخلی */
+  position: relative; /* برای موقعیت‌یابی badge */
+}
+
+.fillBtn:hover {
+  background-color: #eebb21;
+  color: #d84433;
+}
+
+/* استایل‌های badge */
+.fillBtn .badge {
+  display: none; /* پیش‌فرض مخفی */
+  position: absolute;
+  width: 70px;
+  top: -33px; /* موقعیت بالا */
+  left: -24px; /* موقعیت راست */
+  background-color: #eebb21;
+  color: #000000;
+  border-radius: 12px;
+  padding: 5px 10px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  white-space: nowrap; /* جلوگیری از شکستن متن badge */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+
+}
+
+/* مثلث اشاره */
+.fillBtn .badge::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* پایین badge */
+  right: 50%; /* وسط badge */
+  transform: translateX(50%); /* وسط مثلث */
+  border-width: 7px;
+  border-style: solid;
+  border-color: #eebb21 transparent transparent transparent;
+}
+
+.fillBtn:hover .badge {
+  display: block; /* نمایش badge در هاور */
+}
+
+.fillBtn img {
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+}

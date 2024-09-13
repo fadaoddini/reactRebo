@@ -1,0 +1,125 @@
+/* Button.module.css */
+.tbazar {
+  padding-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.custom_dir {
+  background-color: #e7e7e7;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.custom_dir_orange {
+  background-color: #e3c280;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+.custom_dir_red {
+  background-color: #ed9696;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+.custom_dir_green {
+  background-color: #80e2ab;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+.buttonContainer {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 4%;
+}
+
+.button_red,
+.button_green {
+  width: 48%;
+  padding: 5px;
+  font-size: 14px;
+  color: white;
+  border: none !important;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.3); /* سایه داخلی */
+  text-align: center;
+}
+
+.button_red {
+  background-color: #e9553d !important;
+}
+
+.button_red:hover {
+  background-color: #ff9d9d !important;
+  color: #ae240f !important;
+}
+
+.button_green {
+  background-color: #52c073 !important;
+  margin-top: 0; /* حذف فاصله بالایی */
+}
+
+.button_green:hover {
+  background-color: #aad7aa !important;
+  color: #1c7b38 !important;
+}
+/* Button.module.css */
+.btn_bid {
+  display: block; /* مطمئن شویم که لینک به صورت بلوک نمایش داده می‌شود */
+  width: 100%;
+  height: auto; /* تنظیم ارتفاع به صورت خودکار */
+  overflow: hidden; /* جلوگیری از بزرگ شدن تصویر در خارج از محدوده لینک */
+  position: relative; /* برای استفاده از ویژگی position در تصویر */
+}
+
+.btn_bid > img {
+  width: 100%;
+  height: auto; /* حفظ تناسب تصویر */
+  transition: opacity 0.3s ease; /* انتقال صاف برای تغییر تصویر */
+}
+
+.btn_bid:hover > img {
+  opacity: 0; /* مخفی کردن تصویر اول هنگام هاور */
+}
+.btn_bid {
+  background-color: rgb(99, 99, 99) !important;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  background-image: url('../../../assets/images/btn_bid_1.png'); /* مسیر تصویر اصلی */
+  background-size: contain; /* حفظ تناسب تصویر درون کادر */
+  background-position: center; /* مرکز چینش تصویر */
+  background-repeat: no-repeat; /* عدم تکرار تصویر */
+  min-height: 105px;
+  border: none; /* حذف حاشیه دکمه */
+  width: 100%; /* عرض دکمه به اندازه عرض والد */
+  height: auto; /* ارتفاع دکمه به صورت خودکار تنظیم می‌شود */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; /* تغییر شکل ماوس هنگام حرکت بر روی دکمه */
+}
+
+.btn_bid:hover {
+  background-color: rgb(99, 99, 99) !important;
+  border-radius: 6px;
+  background-image: url('../../../assets/images/btn_bid_2.png'); /* مسیر تصویر جدید */
+}
+.btn_bid_green{
+  background-color: #555555 !important;
+  border: none !important;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.buttonRow{
+  cursor: pointer;
+}

@@ -1,0 +1,39 @@
+/* ImageUpload.module.css */
+.container {
+    position: relative;
+  }
+  
+  .dropzone {
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dropzone:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .uploadContent p {
+    margin: 0;
+    color: #555;
+  }
+  
+  .fileInput {
+    display: none;
+  }
+  
+  .imagePreview {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .previewImage {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  

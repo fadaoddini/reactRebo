@@ -1,0 +1,117 @@
+.productCard {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: height 0.3s ease;
+    height: 150px; /* ارتفاع اولیه کارت */
+    position:relative;
+  }
+  
+  .productCard:hover {
+    height: 250px; /* ارتفاع بعد از هاور */
+  }
+  
+
+  
+  .productImage {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  
+  .discountBadge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+    color: white;
+    padding: 13px 3px;
+    border-radius:5px 0 5px;
+    font-size: 0.7rem;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg); /* جهت نوشتن عمودی */
+  }
+  
+  .productDetails {
+    flex: 2;
+    padding: 5px;
+
+  }
+  
+  .productTitle {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .productItem {
+    font-size: 0.8rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .striked {
+    text-decoration: line-through;
+    color: #999;
+  }
+  
+  .number {
+    color: #e74c3c;
+  }
+  
+  .extraDetails {
+    display: none;
+    /* پنهان کردن محتوای اضافه در ابتدا */
+  }
+  
+  .productCard:hover .extraDetails {
+    display: block;
+  }
+  
+  .actionButtons {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .productCard:hover .actionButtons {
+    bottom: 10px;
+    opacity: 1;
+  }
+  
+  .button {
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .editButton {
+    background-color: #3498db !important;
+    color: white;
+  }
+  
+  .deleteButton {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .specialButton {
+    background-color: #f39c12 !important;
+    color: white;
+  }
+  
+  .button:hover {
+    opacity: 0.8;
+  }
+  

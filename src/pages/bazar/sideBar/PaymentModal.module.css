@@ -1,0 +1,119 @@
+/* PaymentModal.module.css */
+.modalBody {
+    padding: 20px;
+    height: 600px;
+    background-color: black;
+    border-radius: 6px !important;
+}
+
+.titr {
+    color: white !important;
+    margin-bottom: 40px;
+}
+
+.titr2 {
+    color: white !important;
+    margin-top: 40px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.modalContent {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* فاصله بین آیتم‌ها */
+}
+
+.item {
+    position: relative;
+    width: 30%; /* هر آیتم یک سوم عرض مودال را می‌گیرد */
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease !important;
+}
+
+.item:hover {
+    transform: scale(1.05); /* کمی بزرگتر شدن آیتم هنگام هاور */
+}
+
+.item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* لایه مشکی با opacity 0.6 */
+    opacity: 0;
+    transition: opacity 0.3s ease !important;
+}
+
+.item:hover::after {
+    opacity: 1;
+}
+
+.bid {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    direction: rtl;
+    z-index: 1000;
+    color: #28a745;
+    font-size: 3rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.item:hover .bid {
+    opacity: 1;
+}
+
+.price {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    direction: rtl;
+    z-index: 1000;
+    color: orange;
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.item:hover .price {
+    opacity: 1;
+}
+
+.paymentButton {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    z-index: 1000;
+    border: none !important;
+    transform: translateX(-50%) !important;
+    background-color: #28a745 !important; /* رنگ سبز */
+    transition: bottom 0.4s ease, background-color 0.5s ease, transform 0.2s ease !important;
+}
+
+.item:hover .paymentButton {
+    bottom: 20%;
+    transform: translate(-50%, -50%) !important; /* دکمه به مرکز آیتم منتقل می‌شود */
+    background-color: #ffaa00 !important; /* تغییر رنگ دکمه به نارنجی هنگام هاور روی آیتم */
+}
+
+.paymentButton:hover {
+    background-color: #40d661 !important; /* تغییر رنگ دکمه به سبز هنگام هاور روی دکمه */
+}
+
+.priceSpan, .bidSpan {
+    margin-right: 5px;
+    font-size: 1rem;
+    color: orange;
+}

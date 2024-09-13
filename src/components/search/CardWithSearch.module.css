@@ -1,0 +1,143 @@
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    padding: 16px;
+    margin-top:5px ;
+    direction: rtl;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  .searchContainer {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd !important;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .searchInput {
+    flex: 1;
+    border: none;
+    padding: 8px 16px !important;
+    font-size: 1rem !important;
+    outline: none;
+  }
+  
+  .searchButton {
+    background-color: #ffffff;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+
+
+  /* AdvancedSearch.module.css */
+
+.advancedSearchContainer {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line if there's not enough space */
+  gap: 10px;
+  padding: 10px;
+  direction: rtl;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.selectItem {
+  flex: 1;
+  min-width: 150px; /* Ensure select elements are not too small */
+  max-width: 250px; /* Max width to avoid being too wide */
+}
+
+.categorySelectItem {
+  flex: 2; /* This makes the category select element twice as large as the others */
+  min-width: 300px; /* Ensure it's wide enough */
+}
+
+.searchButton {
+  background-color: #FFA412 !important;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 20px !important;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  flex: 1; /* Make the button grow to fill space */
+  min-width: 150px;
+}
+
+.searchButton:hover {
+  background-color: #555 !important;
+}
+
+/* Custom styles for react-select */
+.selectControl {
+  border: 1px solid #ddd;
+  box-shadow: none;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.selectControlIsFocused {
+  border-color: #333;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.selectMenu {
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjust option styles */
+.selectOption {
+  padding: 10px;
+  color: #333;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.selectOptionIsSelected {
+  background-color: #eee !important;
+}
+
+.selectOptionIsFocused {
+  background-color: #f0f0f0 !important;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .advancedSearchContainer {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: stretch; /* Ensure items take full width */
+  }
+
+  .selectItem,
+  .categorySelectItem {
+    min-width: 100%; /* Full width for select elements on small screens */
+  }
+
+  .searchButton {
+    width: 100%; /* Full width button on small screens */
+  }
+}

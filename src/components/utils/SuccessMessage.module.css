@@ -1,0 +1,30 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+  }
+  
+  .messageBox {
+    background-color: #4caf50; /* رنگ سبز برای موفقیت */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+    position: relative;
+    color: #fff;
+  }
+  
+  .message {
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.4;
+  }
+  

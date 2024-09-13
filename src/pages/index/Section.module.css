@@ -1,0 +1,84 @@
+/* Section.module.css */
+
+.section {
+  position: relative;
+  min-height: 80vh;
+  margin: 0 15%;
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: row; /* چیدمان افقی */
+  justify-content: center;
+  align-items: flex-start; /* تراز کردن آیتم‌ها در بالای خط */
+  flex-wrap: wrap; /* انتقال به خط بعدی در صورت کمبود فضا */
+  text-align: right; /* راست‌چین کردن متن */
+
+}
+.rightSection {
+  direction: rtl; /* جهت متن راست به چپ */
+
+}
+
+/* استایل برای بخش خدمات */
+.leftSection {
+  direction: ltr; /* جهت متن چپ به راست */
+
+}
+
+.imageWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  height: 80vh; /* ارتفاع کامل صفحه */
+  width: auto;
+  border-radius: 8px; /* گوشه‌های گرد */
+  max-width: 100%;
+  display: block; /* جلوگیری از ایجاد فاصله‌های اضافی در اطراف تصویر */
+}
+
+.contentWrapper {
+  flex: 3;
+  direction: rtl;
+  padding: 2rem; /* padding بهتر برای فضای داخلی */
+  min-height: 80vh; /* ارتفاع کامل صفحه */
+  background-color: #fff; /* رنگ پس‌زمینه سفید برای بخش محتوا */
+  border-radius: 8px; /* گوشه‌های گرد */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* سایه برای بخش محتوا */
+  box-sizing: border-box; /* شامل padding و border در محاسبات عرض و ارتفاع */
+}
+
+.contentWrapper h2 {
+  text-align: right; /* راست‌چین کردن متن */
+  margin-bottom: 1rem; /* فاصله پایین عنوان */
+  color: #FFA412; /* رنگ نارنجی */
+}
+
+.contentWrapper h3 {
+  text-align: right; /* راست‌چین کردن متن */
+  margin-bottom: 1rem; /* فاصله پایین زیرعنوان */
+  color: #FFA412; /* رنگ نارنجی */
+}
+
+.contentWrapper p {
+  margin-bottom: 1.5rem; /* فاصله پایین پاراگراف */
+  line-height: 1.6; /* ارتفاع خط برای خوانایی بهتر */
+  color: #666; /* رنگ متن پاراگراف */
+}
+
+/* Media Queries برای نمایش بهینه در اندازه‌های کوچک‌تر */
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column; /* تغییر به چیدمان عمودی در صفحه‌های کوچکتر */
+  }
+
+  .imageWrapper {
+    display: none; /* پنهان کردن تصویر */
+  }
+
+  .contentWrapper {
+    height: auto; /* ارتفاع خودکار برای محتوا */
+  }
+}

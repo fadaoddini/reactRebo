@@ -1,0 +1,144 @@
+/* Shop.module.css */
+
+/* کارت فروشگاه غیرفعال (نارنجی) */
+.shopCard {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 0px;
+
+  background-color: #fef3e5; /* پس‌زمینه نارنجی روشن */
+}
+
+.shopCardActive {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+
+  margin-top: 0px;
+  background-color: #e5f9e0; /* پس‌زمینه سبز روشن */
+}
+
+/* بقیه استایل‌ها */
+.shopImageWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopImage {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-left: 5px;
+  border: 1px solid #ccc;
+}
+
+.shopDetails {
+  flex: 2;
+  padding-left: 5px;
+}
+
+.shopName {
+  margin-top: 15px;
+  font-size: 0.8rem;
+  color: #000000; /* رنگ مشکی برای نام فروشگاه */
+  margin-bottom: 10px;
+}
+
+.shopInfo {
+  margin-bottom: 5px;
+  color: #333;
+  font-size: 0.7rem;
+}
+
+.shopStatus {
+  font-size: 0.7rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+.shopStatusInactive {
+  color: #FFA412; /* نارنجی برای فروشگاه غیرفعال */
+}
+
+.shopStatusActive {
+  color: #28a745; /* سبز برای فروشگاه فعال */
+}
+.titr{
+  font-size: 1rem !important;
+  margin-right: 7px !important;
+  font-weight: bold;
+  background-color: #FFA412;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: right;
+
+}
+.right_bakhsh{
+  padding: 15px;
+  direction: rtl;
+}
+/* استایل دکمه ثبت محصول جدید */
+.addProductButton {
+  background-color: #ff6f00; /* رنگ اولیه نارنجی */
+  color: white;
+  padding: 7px 15px;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.4s ease; /* انیمیشن تغییر رنگ */
+  margin-top: 10px;
+}
+
+/* تغییر رنگ به سبز هنگام هاور */
+.addProductButton:hover {
+  background-color: #28a745 !important; /* رنگ سبز */
+}
+
+/* Container for product cards */
+.productCardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 220px)); /* تعداد ستون‌ها بر اساس اندازه کارت‌ها و صفحه */
+  gap: 8px; /* فاصله بین کارت‌ها */
+  justify-content: right; /* مرکز چینش کارت‌ها */
+  padding: 8px; /* فاصله داخلی از لبه‌ها */
+}
+
+/* استایل دکمه‌های تب */
+.tabButtons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  justify-content: right;
+}
+
+.tabButton {
+  background-color: #ababab !important;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.4s ease;
+}
+
+.tabButton:hover {
+  background-color: #e65c00 !important;
+}
+
+/* دکمه تب اکتیو */
+.active {
+  background-color: #ffa412 !important;
+}

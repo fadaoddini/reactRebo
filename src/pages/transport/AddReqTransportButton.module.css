@@ -1,0 +1,218 @@
+/* CreateTransportReqModal.module.css */
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  direction: rtl;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: #fff5e0;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  border: 1px solid #ffa412;
+  direction: rtl;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modalContent h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #ffa412; /* رنگ نارنجی برای عنوان */
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formRow {
+  display: flex;
+  gap: 10px;
+}
+
+.formRow > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #000000; /* رنگ برچسب‌ها */
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.formGroup textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.error {
+  color: red;
+  font-size: 0.875rem;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btnPrimary {
+  background-color: #ffa412; /* رنگ نارنجی برای دکمه‌های اصلی */
+  color: #fff;
+  float: left;
+}
+
+.btnPrimary:hover {
+  background-color: #e68a1f; /* رنگ تیره‌تر برای hover */
+}
+
+.btnSecondary {
+  background-color: #6c757d;
+  float: left;
+  color: #fff;
+}
+
+.btnSecondary:hover {
+  background-color: #5a6268;
+}
+
+/* جدید: استایل برای Badge */
+.badgeContainer {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.badge {
+  background-color: #fff;
+  border: 1px solid #005c25;
+  border-radius: 5px;
+
+  padding: 10px;
+  font-size: 0.8rem;
+  color: #005c25;
+  display: flex;
+  flex-direction: column; /* نمایش به صورت دو خطی */
+
+  word-wrap: break-word; /* به‌طور خودکار نوشته را به چند خط تقسیم می‌کند */
+}
+.badge span {
+  text-align: center;
+  color: #005c25;
+}
+.badge strong {
+  text-align: center;
+  color: #000;
+}
+/* استایل برای عدد با فرمت سه رقم سه رقم */
+.number {
+  font-weight: bold;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 15px;
+}
+
+.radioOption {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.radioOption input[type="radio"] {
+  display: none;
+}
+
+.radioOption label {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  border: 1px solid #17961c;
+  border-radius: 5px;
+  padding-right: 20px;
+  text-align: right;
+  line-height: 2.3em;
+  margin: 6px;
+  cursor: pointer;
+  position: relative;
+  padding-left: 50px;
+}
+
+.radioCheckmark {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #17961c;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.radioCheckmark::after {
+  content: "";
+  display: none;
+}
+
+.radioOption input[type="radio"]:checked + label .radioCheckmark {
+  background-color: #4caf50;
+  border-color: #4caf50;
+}
+
+.radioOption input[type="radio"]:checked + label .radioCheckmark::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 6px;
+  bottom: 2px;
+  width: 10px;
+  height: 20px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.numnum {
+    padding: 0 !important;
+    margin: 0 !important;
+}

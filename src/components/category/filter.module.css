@@ -1,0 +1,62 @@
+.filterContainer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-top: 6px;
+  direction: rtl;
+  background-color: #ffffff !important;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  justify-content: space-between; /* توزیع فضا بین آیتم‌ها */
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #000000;
+}
+
+.breadcrumbItem {
+  margin-right: 5px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.breadcrumbItem:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbSeparator {
+  margin: 0 5px;
+}
+
+.displayModeIcons {
+  display: flex;
+  align-items: center;
+}
+
+.displayModeButton {
+  background: none !important;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 5px;
+  transition: background-color 0.3s;
+}
+
+.displayModeButton img {
+  width: 20px;
+  height: 20px;
+  
+}
+
+.displayModeButton:hover {
+  background-color: #f0f0f0 !important;
+}
+
+.active {
+  background-color: #FFA412 !important;
+  border-radius: 5px;
+  color: #ffffff;
+}

@@ -1,0 +1,30 @@
+/* AttributesSelector.module.css */
+
+/* Container to arrange attributes in two columns */
+.attributes_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* دو ستون */
+    gap: 15px; /* فاصله بین عناصر */
+  }
+  
+  /* Style for each form group */
+  .form_group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  /* Style for the label within form group */
+  .form_group label {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #E9553D;
+  }
+  
+  /* Style for select input control */
+  .form_control {
+
+    border-radius: 5px;
+ 
+  }
+  

@@ -1,0 +1,165 @@
+/* پس زمینه مودال */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    direction: rtl !important;
+    justify-content: center;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* محتوای مودال */
+  .modalContent {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    animation: slideDown 0.3s ease-in-out;
+    position: relative;
+  }
+  
+  /* دکمه بستن مودال */
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* عنوان مودال */
+  .titleContainer {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .modalTitle {
+    margin: 0;
+  }
+  
+  /* بدنه مودال */
+  .modalBody {
+    display: flex;
+  }
+  
+  /* بخش فرم */
+  .formSection {
+    width: 75%;
+    padding: 20px; /* فاصله از بخش تصاویر */
+  }
+  
+  /* بخش تصاویر */
+  .imageSection {
+    width: 25%;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* استایل فرم */
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* استایل ردیف‌ها */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  /* عرض‌های متناسب */
+  .fullRow {
+    width: 100%;
+  }
+  
+  .halfWidth {
+    flex: 1 1 48%;
+  }
+  
+  .quarterWidth {
+    flex: 1 1 22%;
+  }
+  
+  /* نمایش زمانی که مودال باز نیست */
+  .hidden {
+    display: none;
+  }
+  
+  /* استایل لیست تصاویر */
+  .imageList {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .imageCard {
+    display: flex;
+    align-items: center;
+    background: #f0f0f0;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  .imageThumbnail {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .removeButton {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 0.7rem;
+   
+    color: white;
+    padding: 7px !important;
+    margin: 5px !important;
+    border: none;
+    border-radius: 5px;
+    line-height: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .removeButton:hover{
+    background: red !important;
+  }
+  
+  /* انیمیشن‌های مودال */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

@@ -1,0 +1,304 @@
+/* استایل کلی کارت سبد خرید و صفحات مختلف */
+.cart, .address, .review, .payment, .finalInvoice {
+  width: 100%;
+  max-width: 800px; /* حداکثر عرض کارت */
+  margin: 0 auto; /* مرکز کردن کارت */
+  padding: 20px;
+  direction: rtl;
+  background-color: #fff; /* پس‌زمینه سفید */
+  border-radius: 10px; /* گوشه‌های گرد */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* سایه ملایم */
+  border: 1px solid #FFA412; /* مرز نارنجی */
+}
+
+/* استایل برای تایم‌لاین مراحل سفارش */
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.step {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 0.8rem;
+  position: relative;
+  width: 24%;
+}
+
+.step::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 100%;
+  background-color: #ddd;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.step:last-child::before {
+  display: none;
+}
+
+.stepNumber {
+  background-color: #ddd;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.stepTitle {
+  margin-top: 5px;
+}
+
+.completed .stepNumber {
+  background-color: #61bbc7;
+  margin-left: 10px;
+}
+
+.completed .stepTitle {
+  color: #61bbc7;
+}
+
+/* استایل برای بخش بالای فاکتور */
+.topSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #FFA412; /* خط جداکننده پایین بخش بالا */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* استایل برای لوگو */
+.logo {
+  max-width: 100px; /* حداکثر عرض لوگو */
+  height: auto; /* حفظ نسبت ابعاد */
+}
+
+/* استایل برای QR کد */
+.qrcode {
+  width: 50px; /* عرض QR کد */
+  height: 50px; /* ارتفاع QR کد */
+}
+
+/* استایل برای جزئیات فاکتور */
+.invoiceDetails {
+  text-align: left; /* راست‌چین */
+}
+
+.invoiceDetails p {
+  font-size: 0.9rem; /* اندازه فونت */
+  margin: 5px 0;
+}
+
+/* استایل برای هدر */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+/* استایل برای اطلاعات خریدار و فروشگاه */
+.infoContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* برای جلوگیری از اشغال فضای زیاد */
+}
+
+.customerInfo,
+.storeInfo {
+  flex: 1 1;
+  margin: 0 10px;
+  text-align: right;
+  min-width: 290px;
+  padding-right: 20px;
+}
+.storeInfo {
+  text-align: right; /* راست‌چین برای اطلاعات فروشگاه */
+}
+
+.customerInfo h2,
+.storeInfo h2 {
+  font-size: 1rem; /* اندازه فونت */
+  margin-bottom: 10px;
+}
+
+.customerInfo p,
+.storeInfo p {
+  font-size: 0.9rem; /* اندازه فونت */
+  margin: 5px 0;
+}
+
+/* استایل برای جدول سفارشات */
+.tableContainer {
+  margin-top: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse; /* هم‌پوشانی سلول‌ها */
+  border-radius: 10px; /* گوشه‌های گرد جدول */
+  overflow: hidden; /* مخفی کردن مرزهای اضافی */
+}
+
+.table th,
+.table td {
+  border: 1px solid #FFA412; /* مرز نارنجی برای سلول‌ها */
+  padding: 4px;
+  text-align: left;
+  font-size: 0.9rem; /* اندازه فونت */
+}
+
+.table th {
+  background-color: #d9d9d9; /* پس‌زمینه سربرگ */
+  color: #000000; /* رنگ متن سربرگ */
+  font-weight: bold; /* قلم پررنگ برای سربرگ */
+  text-align: center;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9f9f9; /* پس‌زمینه ردیف‌های جفت */
+}
+
+.table tr:nth-child(odd) {
+  background-color: #fff; /* پس‌زمینه ردیف‌های فرد */
+}
+
+.table tr:hover {
+  background-color: #f1f1f1; /* پس‌زمینه ردیف‌های هاور */
+}
+
+/* استایل برای جمع کل و هزینه‌ها */
+.summary {
+  margin-top: 20px;
+  text-align: right; /* راست‌چین */
+}
+
+.summary p {
+  font-size: 0.9rem; /* اندازه فونت */
+  margin: 5px 0;
+}
+
+/* استایل برای دکمه چاپ */
+.pdfButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #fff; /* رنگ پس‌زمینه سفید */
+  color: #FFA412; /* رنگ متن نارنجی */
+  border: 1px solid #FFA412; /* مرز نارنجی */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.pdfButton:hover {
+  background-color: #FFA412; /* رنگ پس‌زمینه نارنجی در حالت هاور */
+  color: #fff; /* رنگ متن سفید در حالت هاور */
+}
+
+/* استایل برای ردیف تصویر */
+.productImage {
+  max-width: 40px; /* حداکثر عرض تصویر */
+  height: auto; /* حفظ نسبت ابعاد */
+  border: 1px solid #FFA412; /* مرز خاکستری ملایم */
+  border-radius: 5px; /* گوشه‌های گرد */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* سایه ملایم */
+  display: block;
+  margin: 0 auto; /* مرکز کردن تصویر */
+}
+
+/* استایل برای دکمه حذف */
+.deleteButton {
+  background-color: #d9534f; /* رنگ پس‌زمینه قرمز */
+  color: white; /* رنگ متن سفید */
+  border: none;
+  border-radius: 3px;
+  padding: 2px 10px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.deleteButton:hover {
+  background-color: #c9302c; /* تغییر رنگ در حالت هاور */
+}
+
+/* استایل برای حالت چاپ */
+@media print {
+  .cart, .address, .review, .payment, .finalInvoice {
+    width: 148mm; /* عرض A5 */
+    height: 210mm; /* ارتفاع A5 */
+    padding: 10mm; /* پدینگ داخلی */
+    box-shadow: none; /* حذف سایه در حالت چاپ */
+    margin: 0; /* حذف حاشیه در حالت چاپ */
+    border: none; /* حذف مرز در حالت چاپ */
+  }
+}
+
+/* استایل برای دکمه‌های اکشن */
+.actions {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.pdfButton, .continueButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.pdfButton {
+  background-color: #007bff; /* رنگ پس‌زمینه آبی */
+}
+
+.continueButton {
+  background-color: #e7ffec; /* رنگ پس‌زمینه سبز روشن */
+  border: 1px solid #42d063; /* مرز سبز */
+  color: #000;
+  padding: 5px 20px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  margin: 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.continueButton:hover {
+  background-color: #23853a; /* رنگ پس‌زمینه سبز تیره در حالت هاور */
+  color: #fff; /* رنگ متن سفید در حالت هاور */
+}
+/* استایل برای وضعیت پرداخت */
+.paymentStatus {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-weight: bold;
+}
+
+.paid {
+  color: green;
+}
+
+.unpaid {
+  color: red;
+}

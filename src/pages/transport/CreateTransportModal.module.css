@@ -1,0 +1,259 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    direction: rtl;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background-color: #fff5e0;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    border: 1px solid #FFA412;
+    direction: rtl;
+    max-width: 700px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modalContent h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #FFA412; /* رنگ نارنجی برای عنوان */
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formRow {
+    display: flex;
+    gap: 10px;
+}
+
+.formRow > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup {
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #000000; /* رنگ برچسب‌ها */
+}
+
+.formGroup input,
+.formGroup textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.formGroup textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.licensePlateCard {
+    background-color: #FFA412; /* رنگ نارنجی برای کارت پلاک */
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    direction: ltr;
+    align-items: center;
+    gap: 5px;
+}
+
+.licensePlateSegment {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    text-align: center;
+    padding: 8px;
+}
+
+.left {
+    width: 40px; /* فضای مناسب برای دو رقم */
+    background-color: #fff;
+}
+
+.middle {
+    width: 40px; /* فضای مناسب برای نمایش حرف ع */
+    border: none;
+    font-weight: bold;
+    
+}
+
+.right {
+    width: 70px; /* فضای مناسب برای سه رقم */
+    background-color: #fff;
+}
+
+.iran {
+    width: 40px; /* فضای مناسب برای "ایران YY" */
+    background-color: #fff;
+}
+
+.capacitySlider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.capacitySlider input[type="range"] {
+    flex: 1;
+}
+
+.switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.switch input[type="checkbox"] {
+    appearance: none;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.switch input[type="checkbox"]:checked {
+    background-color: #FFA412; /* رنگ نارنجی برای سوئیچ */
+}
+
+.switch input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: left 0.3s;
+}
+
+.switch input[type="checkbox"]:checked::before {
+    left: 22px;
+}
+
+.switchLabel {
+    font-weight: bold;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btnPrimary {
+    background-color: #FFA412; /* رنگ نارنجی برای دکمه‌های اصلی */
+    color: #fff;
+}
+
+.btnPrimary:hover {
+    background-color: #e68a1f; /* رنگ تیره‌تر برای hover */
+}
+
+.btnSecondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.btnSecondary:hover {
+    background-color: #5a6268;
+}
+
+
+
+
+
+.capacitySlider input[type="range"] {
+    -webkit-appearance: none; /* حذف ظاهر پیش‌فرض برای مرورگرهای وب‌کیت */
+    appearance: none;
+    width: 100%;
+    padding: 0;
+    height:5px; /* کاهش بیشتر ارتفاع اسلایدر */
+    background: #FFA412; /* رنگ نارنجی برای پس‌زمینه اسلایدر */
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.capacitySlider input[type="range"]:hover {
+    opacity: 1;
+}
+
+.capacitySlider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #ffffff; /* رنگ سفید برای دسته */
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #FFA412; /* حاشیه نارنجی برای دسته */
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.capacitySlider input[type="range"]::-webkit-slider-thumb:hover {
+    background: #f0f0f0; /* تغییر رنگ برای hover */
+    transform: scale(1.1); /* بزرگ‌تر شدن دسته در حالت hover */
+}
+
+.capacitySlider input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: #ffffff; /* رنگ سفید برای دسته */
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #FFA412; /* حاشیه نارنجی برای دسته */
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.capacitySlider input[type="range"]::-moz-range-thumb:hover {
+    background: #f0f0f0; /* تغییر رنگ برای hover */
+    transform: scale(1.1); /* بزرگ‌تر شدن دسته در حالت hover */
+}
+
+/* پشتیبانی از مرورگرهای اینترنت اکسپلورر و اج */
+.capacitySlider input[type="range"]::-ms-thumb {
+    width: 18px;
+    height: 18px;
+    background: #ffffff; /* رنگ سفید برای دسته */
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #FFA412; /* حاشیه نارنجی برای دسته */
+}

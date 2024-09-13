@@ -1,0 +1,349 @@
+.card_shop_red {
+  border: 1px solid #FFEFEF;
+  border-radius: 8px;
+  width: 220px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  transition: box-shadow 0.3s, transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+
+.card_shop_red img {
+  width: 180px;
+  height: 180px;
+  border-radius: 11px;
+  border: 1px solid #E9553D;
+  margin-bottom: 8px;
+}
+
+.card_shop_red h1 {
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 10px 0 5px 0;
+  transition: color 0.3s;
+}
+
+.card_shop_red:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02); /* کمی بزرگتر شود */
+}
+
+.top_bider_price_red,
+.price_red,
+.package_red,
+.weight_red {
+  padding: 3px 5px;
+  font-size: 0.7rem;
+  text-align: center;
+  direction: rtl;
+  width: 100%;
+}
+
+.top_bider_price_red {
+  border-radius: 5px;
+  background-color: #E9553D;
+  color: rgb(255, 255, 255);
+}
+
+.price_red,
+.package_red,
+.weight_red {
+  color: black;
+}
+
+.card_shop_red span {
+  font-weight: bold;
+  padding-inline: 3px;
+}
+
+.timer_red {
+  width: 140px;
+  height: 25px;
+  border-radius: 5px;
+  background-color: #FFEFEF;
+  color: #E9553D;
+  direction: rtl;
+  display: inline;
+  
+  transition: transform 0.3s, opacity 0.3s;
+  transform: translateY(100%); /* پنهان در پایین کارت */
+  opacity: 0;
+}
+
+.card_shop_red:hover .timer_red {
+  transform: translateY(0); /* به موقعیت اصلی برگردد */
+  opacity: 1;
+}
+
+.timer_title_red {
+  display: inline;
+  font-size: 0.8rem;
+  padding-right: 5%;
+}
+
+.timer_icon_red {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  background-color: #E9553D;
+  border-radius: 0 5px 0 6px;
+  display: inline;
+}
+
+.timer_icon_red img {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  top: 2px;
+  right: 6px;
+}
+.bg_number_bid_red {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  text-align: center;
+  height: 100px;
+ 
+  border-radius: 5px 0 9px 0;
+  background-color: #FFEFEF;
+  color: #E9553D;
+  direction: rtl;
+}
+
+.bg_number_bid_red span {
+  color: black;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  direction: rtl;
+  font-size: 0.8rem;
+  text-align: center;
+  writing-mode: vertical-rl; /* متن را به صورت عمودی و از راست به چپ می‌نویسد */
+  text-orientation: mixed; /* تنظیم حروف برای نمایش صحیح */
+  white-space: nowrap; /* جلوگیری از شکستن خطوط */
+  transform: rotate(180deg); /* چرخاندن متن برای نمایش صحیح */
+  direction: rtl; /* تنظیم جهت متن به راست به چپ */
+}
+
+.text_number_bid_red {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  direction: rtl;
+  font-size: 0.8rem;
+  text-align: center;
+  writing-mode: vertical-rl; /* متن را به صورت عمودی و از راست به چپ می‌نویسد */
+  text-orientation: mixed; /* تنظیم حروف برای نمایش صحیح */
+  white-space: nowrap; /* جلوگیری از شکستن خطوط */
+  transform: rotate(180deg); /* چرخاندن متن برای نمایش صحیح */
+  direction: rtl; /* تنظیم جهت متن به راست به چپ */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card_shop_green {
+  border: 1px solid #E0F7E0;
+  border-radius: 8px;
+  width: 220px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  transition: box-shadow 0.3s, transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+
+.card_shop_green img {
+  width: 180px;
+  height: 180px;
+  border-radius: 11px;
+  border: 1px solid #4CAF50;
+  margin-bottom: 8px;
+}
+
+.card_shop_green h1 {
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 10px 0 5px 0;
+  transition: color 0.3s;
+}
+
+.card_shop_green:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02); /* کمی بزرگتر شود */
+}
+
+.top_bider_price_green,
+.price_green,
+.package_green,
+.weight_green {
+  padding: 3px 5px;
+  font-size: 0.7rem;
+  text-align: center;
+  direction: rtl;
+  width: 100%;
+}
+
+.top_bider_price_green {
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: rgb(255, 255, 255);
+}
+
+.price_green,
+.package_green,
+.weight_green {
+  color: black;
+}
+
+.card_shop_green span {
+  font-weight: bold;
+  padding-inline: 3px;
+}
+
+.timer_green {
+  width: 140px;
+  height: 25px;
+  border-radius: 5px;
+  background-color: #E0F7E0;
+  color: #4CAF50;
+  direction: rtl;
+  display: inline;
+  transition: transform 0.3s, opacity 0.3s;
+  transform: translateY(100%); /* پنهان در پایین کارت */
+  opacity: 0;
+}
+
+.card_shop_green:hover .timer_green {
+  transform: translateY(0); /* به موقعیت اصلی برگردد */
+  opacity: 1;
+}
+
+.timer_title_green {
+  display: inline;
+  font-size: 0.8rem;
+  padding-right: 5%;
+}
+
+.timer_icon_green {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  background-color: #52c073;
+  border-radius: 0 5px 0 6px;
+  display: inline;
+}
+
+.timer_icon_green img {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  top: 2px;
+  right: 6px;
+}
+
+.bg_number_bid_green {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  text-align: center;
+  height: 100px;
+ 
+  border-radius: 5px 0 9px 0;
+  background-color: #efffea;
+  color: #52c073;
+  direction: rtl;
+}
+
+.bg_number_bid_green span {
+  color: black;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  direction: rtl;
+  font-size: 0.8rem;
+  text-align: center;
+  writing-mode: vertical-rl; /* متن را به صورت عمودی و از راست به چپ می‌نویسد */
+  text-orientation: mixed; /* تنظیم حروف برای نمایش صحیح */
+  white-space: nowrap; /* جلوگیری از شکستن خطوط */
+  transform: rotate(180deg); /* چرخاندن متن برای نمایش صحیح */
+  direction: rtl; /* تنظیم جهت متن به راست به چپ */
+}
+
+.text_number_bid_green {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  direction: rtl;
+  font-size: 0.8rem;
+  text-align: center;
+  writing-mode: vertical-rl; /* متن را به صورت عمودی و از راست به چپ می‌نویسد */
+  text-orientation: mixed; /* تنظیم حروف برای نمایش صحیح */
+  white-space: nowrap; /* جلوگیری از شکستن خطوط */
+  transform: rotate(180deg); /* چرخاندن متن برای نمایش صحیح */
+  direction: rtl; /* تنظیم جهت متن به راست به چپ */
+}
+
+.vertical_text {
+  writing-mode: vertical-rl; /* متن را به صورت عمودی و از راست به چپ می‌نویسد */
+  text-orientation: upright; /* حروف را به صورت عمودی و افقی نشان می‌دهد */
+  transform: rotate(180deg); /* برای چرخاندن متن اگر جهت نوشته اشتباه بود */
+  white-space: nowrap; /* جلوگیری از شکستن خطوط */
+}
+
+.wrapper {
+  display: grid;
+  gap: 0.3rem 1.1rem;
+  grid-template-columns: repeat(4, 1fr); /* سه ستون برای اندازه‌های بزرگ */
+}
+
+@media (max-width: 1400px) {
+  .wrapper {
+    grid-template-columns: repeat(3, 1fr); /* دو ستون برای اندازه‌های متوسط */
+  }
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr); /* دو ستون برای اندازه‌های متوسط */
+  }
+}
+
+@media (max-width: 568px) {
+  .wrapper {
+    grid-template-columns: repeat(1, 1fr); /* یک ستون برای اندازه‌های کوچک */
+  }
+}
+
+

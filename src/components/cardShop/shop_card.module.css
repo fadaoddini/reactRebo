@@ -1,0 +1,148 @@
+.shop_card {
+  border: 1px solid #FFA412;
+  border-radius: 8px;
+  width: 100%; /* استفاده از عرض 100% برای مطابقت با عرض ستون گرید */
+  max-width: 260px; /* حداکثر عرض کارت */
+  height: 150px; /* ارتفاع کارت */
+  cursor: pointer;
+  direction: rtl;
+  margin-right: 40px;
+  margin-bottom: 8px;
+  background-color: #fff;
+  position: relative; /* موقعیت relative برای استفاده از absolute درون آن */
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+
+.shop_card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 11px;
+  border: 1px solid #FFA412;
+  position: absolute;
+  top: 15%;
+  right: -17%; /* بیرون آوردن تصویر از کادر */
+  transition: transform 0.4s ease-in-out;
+}
+
+.shop_card img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in-out;
+}
+
+.shop_card img:hover::after {
+  transform: translateX(100%);
+}
+
+.shop_card h1 {
+  font-size: 0.8rem;
+  text-align: right;
+  margin: 10px 0 5px 0;
+  padding-right: 20%;
+}
+
+.shop_card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02); /* کمی بزرگتر شود */
+}
+
+.category {
+  position: absolute;
+  bottom: 0; /* قرارگیری در پایین */
+  right: 0; /* قرارگیری در سمت راست */
+  background-color: #FFA412; /* رنگ نارنجی */
+  color: #000000;
+  padding: 3px 5px;
+  font-size: 0.7rem;
+  border-radius: 5px 0 5px 0;
+  text-align: center;
+}
+
+.price,
+.discountPrice,
+.package,
+.weight {
+  padding: 3px 5px;
+  font-size: 0.7rem;
+  text-align: right;
+  float: right;
+  margin-right: 20%;
+  color: black;
+}
+
+.number_badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 60px;
+  border-right: 1px solid #FFA412; /* مرز نارنجی */
+  border-bottom: 1px solid #FFA412; /* مرز نارنجی */
+  border-radius: 5px 0 9px 0;
+  background-color: #c21919;
+  color: #ffffff;
+  text-align: center;
+  direction: rtl;
+}
+
+.text_number_badge {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  font-size: 0.8rem;
+  text-align: center;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.fillBtnOrange {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #FFA412; /* رنگ نارنجی */
+  color: rgb(0, 0, 0);
+  padding: 8px 12px;
+  border-radius: 0px 8px 0px 5px; /* گوشه‌های پایین سمت چپ کارت */
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.8rem;
+  transition: background-color 0.3s;
+}
+
+.fillBtnOrange:hover {
+  background-color: #4CAF50; /* رنگ سبز برای حالت هاور */
+  color: rgb(255, 255, 255);
+}
+.rtl_diection{
+  direction: rtl;
+}
+.wrapper {
+  display: grid;
+  direction: rtl;
+  gap: 0.3rem 1.1rem; /* فاصله بین کارت‌ها */
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); /* استفاده از auto-fill برای پر کردن فضای خالی */
+}
+
+@media (max-width: 1400px) {
+  .wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); /* مطابقت با اندازه‌های متوسط */
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    grid-template-columns: 1fr; /* یک ستون برای اندازه‌های کوچک */
+  }
+}

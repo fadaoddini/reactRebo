@@ -1,0 +1,183 @@
+/* ModalWithForm.module.css */
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    direction: rtl;
+    align-items: center;
+    z-index: 1000;
+}
+.attributesGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* فاصله بین ستون‌ها */
+}
+
+.attributeItem {
+    flex: 1 1 45%; /* عرض ستون‌ها */
+    min-width: 200px; /* عرض حداقل هر ستون */
+}
+
+.attributeItem label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.attributeItem .react-select__placeholder {
+    color: #888;
+}
+
+.modalContent {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 700px;
+    height: 600px; /* ارتفاع ثابت */
+    overflow: hidden; /* اضافه کردن اسکرول برای محتوای اضافی */
+    position: relative;
+    border: 2px solid #ffa412;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 1.2rem !important;
+    color: #ffa412;
+    margin-bottom: 15px;
+}
+
+.formGroup {
+    margin-bottom: 15px;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.formGroup input[type="text"],
+.formGroup select,
+.formGroup textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.formGroup textarea {
+    resize: none;
+    height: 100px;
+}
+
+.dropzone {
+    border: 2px dashed #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.dropzone:hover {
+    border-color: #ffa412;
+}
+
+.filePreviewContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    overflow-y: auto; /* اضافه کردن اسکرول برای محتوای اضافی */
+}
+
+.filePreview {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #f9f9f9;
+    height: 40px; /* ارتفاع ثابت برای هر تصویر */
+}
+
+.filePreview img {
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 5px;
+}
+
+.fileDetails {
+    flex: 1 ;
+    display: flex;
+    flex-direction: column;
+}
+
+.fileDetails p {
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+.removeButton {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: #c91818;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 2px 6px;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
+}
+
+.removeButton:hover {
+    background-color: #a40e0e;
+}
+
+.formActions {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: auto; /* اینجا برای فشار دادن دکمه‌ها به پایین استفاده می‌شود */
+}
+
+.formActions button {
+    background-color: #ffa412;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+.formActions .cancelButton {
+    background-color: #c91818;
+}
+
+.cancelButton:hover {
+    background-color: #a40e0e;
+}

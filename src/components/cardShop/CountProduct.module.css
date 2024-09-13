@@ -1,0 +1,67 @@
+.counter {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 40px; /* فاصله از پایین کارت */
+  left: 10px;
+
+  justify-content: center; /* وسط چین کردن */
+}
+
+.btnPlus {
+  background-color: #2f7e05; /* سبز کم رنگ */
+  border: 1px solid #ffffff;
+  color: white;
+  padding: 5px 7px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-left: 5px;
+  height: 30px; /* ارتفاع کمتر برای مربع‌مانند شدن */
+  width: 30px; /* مربع‌مانند شدن */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.btnPlus:hover {
+  background-color: #c6f1b1; /* رنگ سبز تیره‌تر برای حالت هاور */
+  color: #2f7e05;
+  border: 1px solid #2f7e05;
+}
+
+.btnMinus {
+  background-color: #d93434; /* قرمز کم رنگ */
+  border: 1px solid #ffffff;
+  color: white;
+  padding: 5px 7px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-right: 5px;
+  height: 30px; /* ارتفاع کمتر برای مربع‌مانند شدن */
+  width: 30px; /* مربع‌مانند شدن */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.btnMinus:hover {
+  background-color: #ffcbcb; /* رنگ قرمز تیره‌تر برای حالت هاور */
+  border: 1px solid #d93434;
+  color: #d93434;
+}
+
+.input {
+  width: 40px;
+  text-align: center;
+  border: 1px solid #FFA412;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: white;
+  font-size: 1rem;
+  color: black;
+  pointer-events: none; /* جلوگیری از ویرایش توسط کاربر */
+}

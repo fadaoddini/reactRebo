@@ -1,0 +1,46 @@
+/* Divar.module.css */
+
+.floatingButton {
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    background-color: #ffa412;
+    color: white;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+    animation: pulseBorder 1s infinite; /* اضافه کردن انیمیشن */
+  }
+  
+  .floatingButton:hover {
+    background-color: #3ab988;
+    border-color: #ffa412;
+    transform: scale(1.1);
+  }
+  
+  @keyframes pulseBorder {
+    0% {
+      border-width: 1px;
+      background-color: #ffa412;
+      color: black;
+    }
+    50% {
+      border-width: 6px;
+      background-color: #ff6512;
+      color: white;
+    }
+    100% {
+      border-width: 1px;
+      background-color: #ffa412;
+      color: black;
+    }
+  }
+  

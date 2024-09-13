@@ -1,0 +1,164 @@
+/* Container for product cards */
+.productCardContainer {
+    display: grid;
+    direction: rtl;
+    grid-template-columns: repeat(4, 1fr); /* 4 کارت در هر ردیف برای حالت دسکتاپ */
+    gap: 16px; /* فاصله بین کارت‌ها */
+    justify-content: center; /* مرکز چینش کارت‌ها */
+    padding: 16px; /* فاصله داخلی از لبه‌ها */
+}
+
+/* استایل کارت */
+.productCard {
+    border: 1px solid #FFA412;
+    border-radius: 8px;
+    background-color: #ffffff;
+    position: relative;
+    transition: box-shadow 0.3s, transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+/* استایل تصویر درون کارت */
+.productImageWrapper {
+    text-align: center;
+}
+
+.productImageWrapper img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+/* عنوان محصول */
+.productTitle {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 5px 0;
+    transition: color 0.3s;
+}
+
+/* افکت هاور کارت */
+.productCard:hover {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* استایل آیتم‌های محصول */
+.productItem {
+    padding: 3px 5px;
+    font-size: 0.7rem;
+    text-align: center;
+    direction: rtl;
+    width: 100%;
+}
+
+/* استایل برای خط‌خورده بودن قیمت */
+.striked {
+    text-decoration: line-through;
+}
+
+/* استایل برچسب‌های تخفیف، دسته‌بندی و زیر دسته‌بندی */
+.discountBadge,
+.categoryBadge,
+.subCategoryBadge {
+    background-color: #FFA412;
+    color: #ffffff;
+    padding: 2px 5px;
+    margin-left: 5px;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    display: inline-block;
+}
+
+/* رنگ خاص برای برچسب‌های تخفیف */
+.discountBadge {
+    background-color: #4fca95;
+    display: inline-block;
+}
+
+/* استایل عدد و موجودی */
+.number {
+    color: black;
+}
+
+/* استایل جزئیات اضافی محصول */
+.extraDetails .productItem {
+    margin-bottom: 5px;
+    width: 200px;
+    border-radius: 5px;
+    background-color: #e8e8e8;
+}
+
+/* افکت هاور بر روی آیتم‌های محصول */
+.productItem:hover {
+    background-color: #f3f3f3;
+}
+
+/* استایل دکمه‌ها */
+.actionButtons {
+    margin-top: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+.button {
+    padding: 5px 10px;
+    font-size: 0.7rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* استایل دکمه ویرایش */
+.editButton {
+    background-color: #FFA412 !important;
+    color: #fff;
+}
+
+.editButton:hover {
+    background-color: #ffedcf !important;
+    color: #FFA412;
+}
+
+/* استایل دکمه ویژه */
+.specialButton {
+    background-color: #1ebb77 !important;
+    color: #fff;
+}
+
+.specialButton:hover {
+    background-color: #dcffee !important;
+    color: #1ebb77;
+}
+
+/* استایل برای نمایش 4 کارت در هر ردیف */
+@media (min-width: 1200px) {
+    .productCardContainer {
+        grid-template-columns: repeat(4, 1fr); /* 4 کارت در هر ردیف */
+    }
+}
+
+/* استایل برای نمایش 3 کارت در هر ردیف */
+@media (max-width: 1199px) and (min-width: 992px) {
+    .productCardContainer {
+        grid-template-columns: repeat(3, 1fr); /* 3 کارت در هر ردیف */
+    }
+}
+
+/* استایل برای نمایش 2 کارت در هر ردیف */
+@media (max-width: 991px) and (min-width: 768px) {
+    .productCardContainer {
+        grid-template-columns: repeat(2, 1fr); /* 2 کارت در هر ردیف */
+    }
+}
+
+/* استایل برای نمایش 1 کارت در هر ردیف */
+@media (max-width: 767px) {
+    .productCardContainer {
+        grid-template-columns: repeat(1, 1fr); /* 1 کارت در هر ردیف */
+    }
+}

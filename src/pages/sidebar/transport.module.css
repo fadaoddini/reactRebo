@@ -1,0 +1,112 @@
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  display: flex;
+  position: relative;
+  align-items: center;
+  background-color: white;
+  border: 1px solid orange;
+  border-radius: 5px;
+  padding: 10px;
+  color: #000000;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    color 0.3s ease;
+}
+.listItem img {
+  border-radius: 50%;
+  padding: 5px;
+}
+.listItem > h6 {
+  color: #000000;
+}
+
+.listItem:hover {
+  background-color: orange;
+  border-color: darkorange;
+  color: white;
+}
+
+.licensePlate {
+  position: absolute;
+  bottom: 2px;
+  left: 7px;
+  text-align: center;
+}
+
+.licensePlateTop {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.licensePlateNumber {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: left;
+  width: 100px;
+  display: inline-block;
+  padding: 3px;
+  background-color: #ffa412;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+.licensePlateIran {
+  font-size: 0.5rem;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: #000000;
+  background-color: #ffa412;
+  padding: 0px;
+  border-radius: 0 5px 0 0;
+  width: 25px;
+  border-left: 1px solid #000000;
+  border-top: 1px solid #000000;
+  border-right: 1px solid #000000;
+}
+
+.right_pelak {
+  background-color: #ffa412;
+}
+
+.licensePlateBottom {
+  font-size: 0.5rem;
+  color: #ffa412;
+  background-color: #ffa412;
+  font-weight: bold;
+}
+
+.licensePlateIranBottom {
+  position: absolute;
+  bottom: 0px;
+  font-size: 12px;
+  background-color: #ffa412;
+  padding: 0px;
+  right: 0px;
+  color: #000000;
+  border-radius: 0 0 5px 0;
+  width: 25px;
+  border-left: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  border-right: 1px solid #000000;
+}
+.requestsContainer {
+  margin-top: 20px;
+}
+
+.requestsList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.requestItem {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}

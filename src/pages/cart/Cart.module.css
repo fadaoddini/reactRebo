@@ -1,0 +1,410 @@
+/* استایل کلی کارت سبد خرید */
+.cart {
+  width: 100%;
+  max-width: 800px; /* حداکثر عرض کارت */
+  margin: 100px auto; /* مرکز کردن کارت */
+  padding: 20px;
+  direction: rtl;
+  background-color: #fff; /* پس‌زمینه سفید */
+  border-radius: 10px; /* گوشه‌های گرد */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* سایه ملایم */
+  border: 1px solid #FFA412; /* مرز نارنجی */
+}
+
+/* استایل برای بخش بالای فاکتور */
+.topSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #FFA412; /* خط جداکننده پایین بخش بالا */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* استایل برای لوگو */
+.logo {
+  max-width: 100px; /* حداکثر عرض لوگو */
+  height: auto; /* حفظ نسبت ابعاد */
+}
+
+/* استایل برای QR کد */
+.qrcode {
+  width: 50px; /* عرض QR کد */
+  height: 50px; /* ارتفاع QR کد */
+}
+
+/* استایل برای جزئیات فاکتور */
+.invoiceDetails {
+  text-align: left; /* راست‌چین */
+}
+
+.invoiceDetails p {
+  font-size: 0.9rem; /* اندازه فونت */
+  margin: 5px 0;
+}
+
+/* استایل برای هدر */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+/* استایل برای اطلاعات خریدار و فروشگاه */
+.infoContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* برای جلوگیری از اشغال فضای زیاد */
+}
+
+.customerInfo,
+.storeInfo {
+  flex: 1 1;
+  margin: 0 10px;
+  text-align: right;
+  min-width: 290px;
+  padding-right: 20px;
+}
+
+.customerInfo h2,
+.storeInfo h2 {
+  font-size: 1rem; /* اندازه فونت */
+  margin-bottom: 10px;
+}
+
+.customerInfo p,
+.storeInfo p {
+  font-size: 0.9rem; /* اندازه فونت */
+  margin: 5px 0;
+}
+
+/* استایل برای جدول سفارشات */
+.tableContainer {
+  margin-top: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse; /* هم‌پوشانی سلول‌ها */
+  border-radius: 10px; /* گوشه‌های گرد جدول */
+  overflow: hidden; /* مخفی کردن مرزهای اضافی */
+}
+
+.table th,
+.table td {
+  border: 1px solid #FFA412; /* مرز نارنجی برای سلول‌ها */
+  padding: 4px;
+  text-align: left;
+  font-size: 0.9rem; /* اندازه فونت */
+}
+
+.table th {
+  background-color: #d9d9d9; /* پس‌زمینه سربرگ */
+  color: #000000; /* رنگ متن سربرگ */
+  font-weight: bold; /* قلم پررنگ برای سربرگ */
+  text-align: center;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9f9f9; /* پس‌زمینه ردیف‌های جفت */
+}
+
+.table tr:nth-child(odd) {
+  background-color: #fff; /* پس‌زمینه ردیف‌های فرد */
+}
+
+.table tr:hover {
+  background-color: #f1f1f1; /* پس‌زمینه ردیف‌های هاور */
+}
+
+/* استایل برای جمع کل و هزینه‌ها */
+.summary {
+  margin-top: 20px;
+  text-align: right; /* راست‌چین */
+}
+
+.summary p {
+  font-size: 0.9rem; /* اندازه فونت */
+  margin: 5px 0;
+}
+
+/* استایل برای دکمه چاپ */
+.pdfButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #fff; /* رنگ پس‌زمینه سفید */
+  color: #FFA412; /* رنگ متن نارنجی */
+  border: 1px solid #FFA412; /* مرز نارنجی */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.pdfButton:hover {
+  background-color: #FFA412; /* رنگ پس‌زمینه نارنجی در حالت هاور */
+  color: #fff; /* رنگ متن سفید در حالت هاور */
+}
+/* استایل برای ردیف تصویر */
+.productImage {
+  max-width: 40px; /* حداکثر عرض تصویر */
+  height: auto; /* حفظ نسبت ابعاد */
+  border: 1px solid #FFA412; /* مرز خاکستری ملایم */
+  border-radius: 5px; /* گوشه‌های گرد */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* سایه ملایم */
+  display: block;
+  margin: 0 auto; /* مرکز کردن تصویر */
+}
+
+/* استایل برای جدول سفارشات */
+.table {
+  width: 100%;
+  border-collapse: collapse; /* هم‌پوشانی سلول‌ها */
+  border-radius: 10px; /* گوشه‌های گرد جدول */
+  overflow: hidden; /* مخفی کردن مرزهای اضافی */
+}
+
+.table th,
+.table td {
+  border: 1px solid #FFA412; /* مرز نارنجی برای سلول‌ها */
+  padding: 3px;
+  text-align: center; /* مرکزچین کردن متن */
+  font-size: 0.9rem; /* اندازه فونت */
+}
+
+.table th {
+  background-color: #d9d9d9; /* پس‌زمینه سربرگ */
+  color: #000000; /* رنگ متن سربرگ */
+  font-weight: bold; /* قلم پررنگ برای سربرگ */
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9f9f9; /* پس‌زمینه ردیف‌های جفت */
+}
+
+.table tr:nth-child(odd) {
+  background-color: #fff; /* پس‌زمینه ردیف‌های فرد */
+}
+
+.table tr:hover {
+  background-color: #f1f1f1; /* پس‌زمینه ردیف‌های هاور */
+}
+.under_table{
+  margin-top: 10px;
+}
+.under_table ol{
+  padding: 1px 20px;
+  font-size: 0.8rem;
+  color: #d61616;
+}
+.deleteButton {
+  background-color: #d9534f; /* رنگ پس‌زمینه قرمز */
+  color: white; /* رنگ متن سفید */
+  border: none;
+  border-radius: 3px;
+  padding: 2px 10px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.deleteButton:hover {
+  background-color: #c9302c; /* تغییر رنگ در حالت هاور */
+}
+
+
+
+/* استایل برای حالت چاپ */
+@media print {
+  .cart {
+    width: 148mm; /* عرض A5 */
+    height: 210mm; /* ارتفاع A5 */
+    padding: 10mm; /* پدینگ داخلی */
+    box-shadow: none; /* حذف سایه در حالت چاپ */
+    margin: 0; /* حذف حاشیه‌های اضافی */
+    border: none; /* حذف مرز برای چاپ */
+    overflow: hidden; /* مخفی کردن محتویات اضافی */
+    page-break-inside: avoid; /* جلوگیری از شکسته شدن صفحه */
+    font-size: 10px; /* کاهش اندازه فونت برای جا شدن محتویات */
+  }
+
+  .topSection {
+    border-bottom: 1px solid #FFA412; /* اضافه کردن خط جداکننده در چاپ */
+    padding-bottom: 5mm;
+    margin-bottom: 5mm; /* فاصله از بخش بعدی */
+  }
+
+  .header {
+    display: flex; /* نمایش بلوکی برای چاپ */
+    align-items: flex-start;
+    justify-content: space-between; /* فاصله‌گذاری بین اجزا */
+    margin-bottom: 5mm; /* فاصله از بخش بعدی */
+  }
+
+  .qrcode {
+    width: 40px; /* عرض محدود QR کد */
+    height: 40px; /* ارتفاع محدود QR کد */
+    margin-left: 10mm; /* فاصله از لوگو */
+  }
+
+  .infoContainer {
+    display: flex; /* نمایش بلوکی برای چاپ */
+    justify-content: space-between; /* فاصله‌گذاری بین اطلاعات */
+    flex-wrap: wrap; /* برای جلوگیری از اشغال فضای زیاد */
+  }
+
+
+
+  
+.customerInfo,
+.storeInfo {
+  flex: 1;
+  margin: 0 10px;
+  text-align: right;
+  min-width: 120px;
+  padding-right: 10px;
+}
+
+  .storeInfo {
+    text-align: right; /* راست‌چین برای اطلاعات فروشگاه */
+  }
+
+  .tableContainer {
+    margin-top: 5mm; /* فاصله از بخش بالایی */
+  }
+
+  .table {
+    width: 100%; /* عرض کامل جدول */
+    border-collapse: collapse; /* هم‌پوشانی سلول‌ها */
+  }
+  .table th{
+    text-align: center; 
+    border: 1px solid #000; /* مرزهای سیاه برای چاپ */
+    padding: 1.5mm; /* پدینگ داخلی سلول‌ها */
+    font-size: 9px; /* اندازه فونت مناسب برای چاپ */
+  }
+  .table td {
+    border: 1px solid #000; /* مرزهای سیاه برای چاپ */
+    padding: 1.5mm; /* پدینگ داخلی سلول‌ها */
+    text-align: center;
+    font-size: 9px; /* اندازه فونت مناسب برای چاپ */
+  }
+
+  .table th {
+    background-color: #f2f2f2; /* پس‌زمینه سربرگ */
+  }
+
+  .table tr:nth-child(even) {
+    background-color: #f9f9f9; /* پس‌زمینه ردیف‌های جفت */
+  }
+
+  .table tr:nth-child(odd) {
+    background-color: #fff; /* پس‌زمینه ردیف‌های فرد */
+  }
+
+  .table tr:hover {
+    background-color: #f1f1f1; /* پس‌زمینه ردیف‌های هاور */
+  }
+
+  .pdfButton {
+    display: none; /* مخفی کردن دکمه در حالت چاپ */
+  }
+}
+
+
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 24%;
+}
+
+.step::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 100%;
+  background-color: #ddd;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.step:last-child::before {
+  display: none;
+}
+
+.stepNumber {
+  background-color: #ddd;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.stepTitle {
+  margin-top: 5px;
+}
+
+.completed .stepNumber {
+  background-color: green;
+}
+
+.completed .stepTitle {
+  color: green;
+}
+
+.actions {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.pdfButton, .continueButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.pdfButton {
+  background-color: #007bff;
+}
+
+.continueButton {
+  background-color: #e7ffec;
+  border: 1px solid #42d063; /* مرز نارنجی برای سلول‌ها */
+  color: #000;
+  padding: 5px 20px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  margin: 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+.continueButton:hover{
+  background-color: #23853a;
+  color: #fff;
+}
+
+

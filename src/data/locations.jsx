@@ -1,0 +1,37 @@
+// data/locations.js
+export const locations = [
+    { id: 1, name: "تهران" },
+    { id: 2, name: "مشهد" },
+    { id: 3, name: "اصفهان" },
+    { id: 4, name: "شیراز" },
+    { id: 5, name: "تبریز" },
+    { id: 6, name: "اهواز" },
+    { id: 7, name: "کرمان" },
+    { id: 8, name: "کرج" },
+    { id: 9, name: "قم" },
+    { id: 10, name: "زنجان" },
+    { id: 11, name: "قزوین" },
+    { id: 12, name: "خرم‌آباد" },
+    { id: 13, name: "یزد" },
+    { id: 14, name: "ارومیه" },
+    { id: 15, name: "ساری" },
+    { id: 16, name: "رشت" },
+    { id: 17, name: "بندرعباس" },
+    { id: 18, name: "سنندج" },
+    { id: 19, name: "همدان" },
+    { id: 20, name: "کرمانشاه" },
+    { id: 21, name: "بروجرد" },
+    { id: 22, name: "شاهین‌شهر" },
+    { id: 23, name: "کاشان" },
+    // Add more cities as needed
+    // Ports
+    { id: 24, name: "بندرعباس" },
+    { id: 25, name: "بندر امام خمینی" },
+    { id: 26, name: "بندر شهید رجایی" },
+    { id: 27, name: "بندر انزلی" },
+    { id: 28, name: "بندر ماهشهر" },
+    { id: 29, name: "بندر نوشهر" },
+    { id: 30, name: "بندر چابهار" },
+    { id: 31, name: "بندر بوشهر" },
+  ];
+  

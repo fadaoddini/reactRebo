@@ -1,0 +1,65 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+  }
+  
+  .dialog {
+    background-color: #fff;
+    padding: 50px;
+    border: 1px solid #ff9800; /* تم نارنجی */
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+  }
+  
+  .message {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* انیمیشن نرم */
+  }
+  
+  .confirmButton {
+    background-color: #ff9800; /* تم نارنجی */
+    color: #fff;
+    border-radius: 5px;
+    width: 40%;
+  }
+  
+  .confirmButton:hover {
+    background-color: #e68900; /* تغییر رنگ در هاور */
+  }
+  
+  .cancelButton {
+    background-color: #ccc;
+    color: #333;
+    border-radius: 5px;
+    width: 40%;
+  }
+  
+  .cancelButton:hover {
+    background-color: #b3b3b3; /* تغییر رنگ در هاور */
+  }
+  

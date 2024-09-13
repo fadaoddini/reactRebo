@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "shabnam";
+  src: url("./shabnam/Shabnam-Medium.ttf");
+}
+
+
+*,
+body,
+button {
+  font-family: "shabnam";
+  list-style-type: none;
+
+}
+
+
+body {
+  margin: 0px;
+}
+
+ul {
+    padding: 0;
+}
+
+/* تنظیم فونت برای نمودارها */
+.chartjs-render-monitor {
+  font-family: "shabnam";
+}
+
+.chartjs-tooltip {
+  font-family: "shabnam";
+}
+

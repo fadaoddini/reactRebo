@@ -1,0 +1,63 @@
+/* CountdownTimer.module.css */
+
+.timerContainer {
+  display: flex;
+  position: absolute;
+  right: 2px;
+  gap: 0;
+ 
+  align-items: center;
+}
+
+/* استایل برای زمانی که زمان کمتر از 24 ساعت است */
+.lessThan24Hours {
+  width: 90px; /* عرض مناسب برای کمتر از 24 ساعت */
+  top: -12px;
+  direction: ltr;
+}
+
+/* استایل برای زمانی که زمان بیشتر از 24 ساعت است */
+.moreThan24Hours {
+  width: auto; /* عرض خودکار برای بیشتر از 24 ساعت */
+  top: 5px;
+  direction: rtl;
+}
+
+.timerCard {
+  position: relative;
+  width: 40px; /* عرض کارت */
+  height: 60px; /* ارتفاع کارت */
+  perspective: 1000px;
+  display: flex;
+  align-items: center; /* هم‌راستایی عمودی */
+  justify-content: center; /* هم‌راستایی افقی */
+}
+
+.timerCardInner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+}
+
+.timerCardFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem; /* اندازه فونت */
+  color: black; /* رنگ متن */
+  background-color: transparent; /* حذف رنگ پس‌زمینه */
+}
+
+.timeSeparator {
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem; /* اندازه فونت */
+  color: black; /* رنگ متن */
+  margin: 0 1px; /* کاهش فاصله اطراف جداکننده */
+}
+

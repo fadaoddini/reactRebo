@@ -1,0 +1,31 @@
+/* right.module.css */
+.tbazar {
+    padding-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .custom_dir_red {
+    background-color: #e8e8e8;
+    color: rgb(255, 40, 40);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+  }
+  
+  .custom_dir_orange {
+    background-color: #e8e8e8;
+    color: rgb(255, 166, 0);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+  }
+  
+  .custom_dir_green {
+    background-color: #e8e8e8;
+    color: rgb(45, 170, 105);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+  }
+  
